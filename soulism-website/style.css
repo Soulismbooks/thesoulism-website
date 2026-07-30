@@ -1,0 +1,353 @@
+/* ===========================================================
+   SOULISM — shared stylesheet
+   Design tokens:
+   Color — paper #F7F5F0, ink #17151C, muted #6B6574,
+           violet #5B2A9E, magenta #D6217E, coral #F2673D, amber #FBA919
+   Type  — display: 'Fraunces' (characterful serif, used with restraint)
+            body: 'Inter' (quiet, readable)
+   Signature — the "breathing circle": a slow, pulsing ring motif
+               standing in for awakened awareness, echoed across pages.
+=========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;600&display=swap');
+
+:root{
+  --paper:#F7F5F0;
+  --paper-dim:#EFEBE2;
+  --ink:#17151C;
+  --ink-soft:#3A3542;
+  --muted:#726C7A;
+  --line:#E2DDD2;
+
+  --violet:#5B2A9E;
+  --magenta:#D6217E;
+  --coral:#F2673D;
+  --amber:#FBA919;
+
+  --night:#120F17;
+  --night-soft:#211C2B;
+
+  --display: 'Fraunces', serif;
+  --body: 'Inter', 'Noto Sans Devanagari', sans-serif;
+
+  --max: 1120px;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:17px;
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{max-width:100%; display:block;}
+a{color:inherit;}
+
+.wrap{max-width:var(--max); margin:0 auto; padding:0 32px;}
+
+h1,h2,h3{
+  font-family:var(--display);
+  font-weight:500;
+  line-height:1.08;
+  margin:0 0 0.4em;
+  letter-spacing:-0.01em;
+  color:var(--ink);
+}
+h1{font-size:clamp(2.6rem, 5.5vw, 4.6rem); font-weight:500;}
+h2{font-size:clamp(1.9rem, 3.4vw, 2.7rem);}
+h3{font-size:1.35rem; font-weight:600;}
+p{margin:0 0 1.1em; color:var(--ink-soft);}
+.lede{font-size:1.2rem; color:var(--ink-soft); max-width:60ch;}
+
+.eyebrow{
+  font-family:var(--body);
+  font-size:0.78rem;
+  letter-spacing:0.16em;
+  text-transform:uppercase;
+  color:var(--magenta);
+  font-weight:600;
+  margin-bottom:14px;
+  display:inline-block;
+}
+
+/* gradient text for the one signature word per page */
+.grad-word{
+  background:linear-gradient(100deg, var(--violet), var(--magenta) 45%, var(--coral) 75%, var(--amber));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
+/* ---------- HEADER ---------- */
+header.site{
+  position:sticky; top:0; z-index:50;
+  background:rgba(247,245,240,0.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:20px 32px;
+  max-width:var(--max); margin:0 auto;
+}
+.logo{
+  font-family:var(--display);
+  font-size:1.3rem; font-weight:600;
+  letter-spacing:0.02em;
+  text-decoration:none;
+  color:var(--ink);
+  display:flex; align-items:center; gap:10px;
+}
+.logo .ring{
+  width:20px; height:20px; border-radius:50%;
+  border:2.5px solid var(--ink);
+  border-top-color:var(--magenta);
+  border-right-color:var(--coral);
+}
+.navlinks{display:flex; gap:34px; list-style:none; margin:0; padding:0;}
+.navlinks a{
+  text-decoration:none; color:var(--ink-soft); font-size:0.95rem; font-weight:500;
+  padding-bottom:3px; border-bottom:2px solid transparent;
+  transition:border-color .2s, color .2s;
+}
+.navlinks a:hover, .navlinks a.active{color:var(--ink); border-color:var(--magenta);}
+.navtoggle{display:none; background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--ink);}
+
+@media (max-width:760px){
+  .navlinks{
+    position:absolute; top:100%; left:0; right:0;
+    background:var(--paper); border-bottom:1px solid var(--line);
+    flex-direction:column; gap:0; padding:8px 32px 20px;
+    display:none;
+  }
+  .navlinks.open{display:flex;}
+  .navlinks a{padding:12px 0; border-bottom:1px solid var(--line);}
+  .navtoggle{display:block;}
+}
+
+/* ---------- BREATHING CIRCLE signature ---------- */
+.breathe-wrap{position:relative; display:flex; align-items:center; justify-content:center;}
+.ring{
+  position:absolute; inset:0;
+  border-radius:50%;
+  background:conic-gradient(from 0deg, var(--violet), var(--magenta), var(--coral), var(--amber), var(--violet));
+  -webkit-mask:radial-gradient(farthest-side, transparent calc(100% - 6px), #fff calc(100% - 6px));
+  mask:radial-gradient(farthest-side, transparent calc(100% - 6px), #fff calc(100% - 6px));
+  animation:spin 16s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg);}}
+@keyframes pulse{
+  0%,100%{transform:translate(-50%,-50%) scale(1);}
+  50%{transform:translate(-50%,-50%) scale(1.045);}
+}
+.breathe-logo-center{
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:62%; border-radius:50%;
+  background:var(--paper);
+  padding:8px;
+  box-shadow:0 10px 30px rgba(23,21,28,0.14);
+  animation:pulse 5s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce){
+  .ring{animation:none;}
+  .breathe-logo-center{animation:none;}
+}
+
+/* ---------- HERO ---------- */
+.hero{
+  padding:96px 0 80px;
+  position:relative; overflow:hidden;
+}
+.hero-grid{
+  display:grid; grid-template-columns:1.1fr 0.7fr; gap:56px; align-items:center;
+}
+@media (max-width:860px){ .hero-grid{grid-template-columns:1fr;} }
+.hero h1{margin-bottom:22px;}
+
+/* ---------- BUTTONS ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:14px 26px;
+  border-radius:2px;
+  font-weight:600; font-size:0.95rem;
+  text-decoration:none;
+  cursor:pointer; border:none;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.btn-primary{
+  background:var(--ink); color:var(--paper);
+}
+.btn-primary:hover{transform:translateY(-2px); box-shadow:0 10px 24px rgba(23,21,28,0.22);}
+.btn-outline{
+  background:transparent; color:var(--ink); border:1.5px solid var(--ink);
+}
+.btn-outline:hover{background:var(--ink); color:var(--paper);}
+.btn-row{display:flex; gap:16px; flex-wrap:wrap; margin-top:8px;}
+
+/* ---------- SECTIONS ---------- */
+section{padding:88px 0;}
+.section-dark{
+  background:var(--night); color:var(--paper);
+}
+.section-dark h2, .section-dark h3{color:var(--paper);}
+.section-dark p{color:#C9C3D4;}
+.section-dim{background:var(--paper-dim);}
+
+.section-head{max-width:640px; margin-bottom:52px;}
+
+/* ---------- CARDS ---------- */
+.grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+.grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:28px;}
+@media (max-width:860px){ .grid-3{grid-template-columns:1fr;} .grid-2{grid-template-columns:1fr;} }
+
+.card{
+  background:var(--paper); border:1px solid var(--line);
+  padding:34px 30px; border-radius:2px;
+}
+.card .num{
+  font-family:var(--display); font-size:0.85rem; color:var(--magenta);
+  font-weight:600; margin-bottom:12px; display:block;
+}
+
+/* ---------- PRINCIPLE LIST ---------- */
+.principle{
+  display:grid; grid-template-columns:64px 1fr; gap:20px;
+  padding:26px 0; border-top:1px solid var(--line);
+}
+.principle:last-child{border-bottom:1px solid var(--line);}
+.principle .n{
+  font-family:var(--display); font-size:1.6rem; color:var(--magenta); font-weight:500;
+}
+.principle h3{margin-bottom:6px;}
+.principle p{margin:0; color:var(--muted); font-size:0.98rem;}
+
+/* ---------- EXPANDED PRINCIPLE (About page) ---------- */
+.principle-full{
+  display:grid; grid-template-columns:110px 1fr; gap:28px;
+  padding:36px 0; border-top:1px solid var(--line);
+  align-items:start;
+}
+@media (max-width:640px){
+  .principle-full{grid-template-columns:72px 1fr; gap:18px;}
+}
+.principle-icon{
+  width:100%; border-radius:50%; box-shadow:0 8px 20px rgba(23,21,28,0.14);
+}
+.p-num{
+  font-family:var(--display); font-size:0.8rem; color:var(--magenta); font-weight:600;
+  letter-spacing:0.08em;
+}
+.principle-full h3{margin:4px 0 10px;}
+.principle-full p{font-size:0.97rem; margin-bottom:10px;}
+.principle-full p:last-child{margin-bottom:0;}
+
+.core-principle{
+  margin-top:40px; padding:52px 40px; text-align:center;
+  background:var(--night); border-radius:2px;
+}
+.core-principle p{
+  font-family:var(--display); font-style:italic; font-weight:500;
+  font-size:clamp(1.3rem, 2.6vw, 1.9rem); color:var(--paper);
+  max-width:760px; margin:14px auto 0; line-height:1.4;
+}
+
+/* ---------- QUOTE STRIP ---------- */
+.quote-strip{
+  padding:80px 0; text-align:center;
+}
+.quote-strip blockquote{
+  font-family:var(--display); font-style:italic; font-weight:500;
+  font-size:clamp(1.4rem, 3vw, 2.1rem);
+  max-width:820px; margin:0 auto; line-height:1.35;
+  color:var(--ink);
+}
+.quote-strip cite{
+  display:block; margin-top:22px; font-style:normal;
+  font-family:var(--body); font-size:0.85rem; letter-spacing:0.1em;
+  text-transform:uppercase; color:var(--muted);
+}
+
+/* ---------- BOOK CARD ---------- */
+.book-card{
+  display:grid; grid-template-columns:220px 1fr; gap:40px; align-items:start;
+  padding:40px 0; border-top:1px solid var(--line);
+}
+.book-card:last-child{border-bottom:1px solid var(--line);}
+@media (max-width:700px){ .book-card{grid-template-columns:1fr; }}
+.book-cover-img{
+  width:100%; border-radius:2px; box-shadow:0 24px 50px rgba(23,21,28,0.18);
+}
+.book-cover-placeholder{
+  aspect-ratio:2/3; width:100%; border-radius:2px;
+  background:var(--night);
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  padding:24px;
+  box-shadow:0 24px 50px rgba(23,21,28,0.18);
+}
+.book-cover-placeholder .bp-title{
+  font-family:var(--display); color:var(--paper); font-size:1.3rem; line-height:1.25;
+}
+.book-cover-placeholder .bp-sub{
+  color:#B9B2C6; font-size:0.78rem; letter-spacing:0.08em; margin-top:14px; text-transform:uppercase;
+}
+.book-tag{
+  display:inline-block; font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--coral); font-weight:600; margin-bottom:10px;
+}
+
+/* ---------- FOOTER ---------- */
+footer.site{
+  background:var(--night); color:#B9B2C6;
+  padding:64px 0 36px;
+}
+footer.site .foot-grid{
+  display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px;
+  margin-bottom:48px;
+}
+@media (max-width:700px){ footer.site .foot-grid{grid-template-columns:1fr;} }
+footer.site h4{
+  color:var(--paper); font-family:var(--body); font-size:0.85rem;
+  letter-spacing:0.1em; text-transform:uppercase; margin:0 0 16px;
+}
+footer.site ul{list-style:none; margin:0; padding:0;}
+footer.site li{margin-bottom:10px;}
+footer.site a{color:#B9B2C6; text-decoration:none; font-size:0.95rem;}
+footer.site a:hover{color:var(--paper);}
+.foot-bottom{
+  border-top:1px solid rgba(255,255,255,0.12); padding-top:24px;
+  display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px;
+  font-size:0.85rem; color:#8A8496;
+}
+
+/* ---------- FORM ---------- */
+.field{margin-bottom:20px;}
+.field label{display:block; font-size:0.85rem; font-weight:600; margin-bottom:8px; color:var(--ink-soft);}
+.field input, .field textarea{
+  width:100%; padding:14px 16px; border:1.5px solid var(--line); border-radius:2px;
+  font-family:var(--body); font-size:1rem; background:var(--paper); color:var(--ink);
+}
+.field input:focus, .field textarea:focus{outline:2px solid var(--magenta); outline-offset:1px; border-color:var(--magenta);}
+
+/* ---------- BLOG ---------- */
+.post-card{padding:32px 0; border-top:1px solid var(--line); display:block; text-decoration:none;}
+.post-card:last-child{border-bottom:1px solid var(--line);}
+.post-date{font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--muted);}
+.post-card h3{margin:8px 0 8px; transition:color .15s;}
+.post-card:hover h3{color:var(--magenta);}
+
+.tag-pill{
+  display:inline-block; padding:5px 12px; border:1px solid var(--line); border-radius:20px;
+  font-size:0.78rem; color:var(--muted); margin-right:8px;
+}
+
+/* ---------- HINDI TEXT ---------- */
+.hi{font-family:'Noto Sans Devanagari', var(--body);}
+
+/* ---------- UTIL ---------- */
+.center{text-align:center;}
+.mt-large{margin-top:60px;}
+.visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);}
+:focus-visible{outline:2px solid var(--magenta); outline-offset:2px;}

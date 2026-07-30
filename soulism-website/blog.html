@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — Soulism</title>
+<meta name="description" content="Reflections on consciousness, fear, meaning, and money from the Soulism philosophy.">
+<meta property="og:title" content="Blog — Soulism">
+<meta property="og:description" content="Short, honest reflections from the Soulism philosophy.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <img src="images/soulism-logo.png" alt="Soulism logo" style="height:40px; width:auto;">
+    </a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Soulism</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:20px;">
+  <div class="wrap">
+    <span class="eyebrow">Reflections</span>
+    <h1 style="max-width:760px;">Short, honest ideas — one at a time.</h1>
+    <p class="lede" style="font-size:1.15rem;">No content calendar, no filler. Just Soulism thinking worked out in public.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px;">
+  <div class="wrap" style="max-width:760px;">
+
+    <div id="tag-filters" style="margin-bottom:10px;"></div>
+
+    <div id="posts-list">
+      <p style="color:var(--muted);">Loading posts…</p>
+    </div>
+
+    <div class="center" style="margin-top:60px; padding:40px; border:1px dashed var(--line);">
+      <p style="margin:0; color:var(--muted);">New reflections are added regularly. Subscribe on the <a href="contact.html" style="color:var(--magenta); font-weight:600;">Contact page</a> to get them by email.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/soulism-logo.png" alt="Soulism" style="height:44px; width:auto; margin-bottom:16px; filter:invert(1);">
+        <p style="color:#B9B2C6; max-width:340px;">A modern philosophy of awakened consciousness, honest ethics, and self-authored meaning.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Soulism</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/thesoulism_" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TheSoulism" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://youtube.com/@thesoulism" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="mailto:thesoulism@gmail.com">thesoulism@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Soulism. All rights reserved.</span>
+      <span>Founded by Shashank</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navtoggle').addEventListener('click', function(){
+    document.getElementById('navlinks').classList.toggle('open');
+  });
+
+  // ===================================================================
+  // IMPORTANT: replace these two values with your real GitHub username
+  // and repository name so the blog can find your posts.
+  // ===================================================================
+  const GITHUB_OWNER = "YOUR_GITHUB_USERNAME";
+  const GITHUB_REPO  = "YOUR_REPO_NAME";
+  const BRANCH = "main";
+
+  function parseFrontmatter(raw) {
+    const match = raw.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
+    if (!match) return { data: {}, body: raw };
+    const yaml = match[1];
+    const body = match[2];
+    const data = {};
+    yaml.split('\n').forEach(line => {
+      const idx = line.indexOf(':');
+      if (idx === -1) return;
+      const key = line.slice(0, idx).trim();
+      let val = line.slice(idx + 1).trim();
+      val = val.replace(/^["']|["']$/g, '');
+      data[key] = val;
+    });
+    return { data, body };
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  async function loadPosts() {
+    const listEl = document.getElementById('posts-list');
+    try {
+      const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/posts?ref=${BRANCH}`;
+      const res = await fetch(apiUrl);
+      if (!res.ok) throw new Error('Could not reach GitHub (' + res.status + ')');
+      const files = await res.json();
+      const mdFiles = files.filter(f => f.name.endsWith('.md'));
+
+      if (mdFiles.length === 0) {
+        listEl.innerHTML = '<p style="color:var(--muted);">No posts yet — check back soon.</p>';
+        return;
+      }
+
+      const posts = await Promise.all(mdFiles.map(async file => {
+        const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/posts/${file.name}`;
+        const rawRes = await fetch(rawUrl);
+        const raw = await rawRes.text();
+        const { data } = parseFrontmatter(raw);
+        return {
+          slug: file.name.replace(/\.md$/, ''),
+          title: data.title || file.name,
+          date: data.date ? new Date(data.date) : new Date(0),
+          tag: data.tag || '',
+          excerpt: data.excerpt || ''
+        };
+      }));
+
+      posts.sort((a, b) => b.date - a.date);
+
+      const tags = [...new Set(posts.map(p => p.tag).filter(Boolean))];
+      const filterEl = document.getElementById('tag-filters');
+      if (tags.length) {
+        filterEl.innerHTML = '<span class="tag-pill" data-tag="" style="cursor:pointer; font-weight:600;">All</span> ' +
+          tags.map(t => `<span class="tag-pill" data-tag="${escapeHtml(t)}" style="cursor:pointer;">${escapeHtml(t)}</span>`).join(' ');
+      }
+
+      function render(filterTag) {
+        const filtered = filterTag ? posts.filter(p => p.tag === filterTag) : posts;
+        listEl.innerHTML = filtered.map(p => `
+          <a href="post.html?post=${encodeURIComponent(p.slug)}" class="post-card">
+            <span class="post-date">${p.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}${p.tag ? ' · ' + escapeHtml(p.tag) : ''}</span>
+            <h3>${escapeHtml(p.title)}</h3>
+            <p>${escapeHtml(p.excerpt)}</p>
+          </a>
+        `).join('');
+      }
+
+      render(null);
+      filterEl.addEventListener('click', e => {
+        const tag = e.target.getAttribute('data-tag');
+        if (tag === null) return;
+        render(tag || null);
+      });
+
+    } catch (err) {
+      listEl.innerHTML = '<p style="color:var(--muted);">Posts will appear here once the blog is connected. (' + escapeHtml(err.message) + ')</p>';
+    }
+  }
+
+  loadPosts();
+</script>
+</body>
+</html>

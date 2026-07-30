@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Soulism</title>
+<meta name="description" content="Get in touch with Shashank, founder of Soulism.">
+<meta property="og:title" content="Contact — Soulism">
+<meta property="og:description" content="Reach Shashank, founder of Soulism, or subscribe to weekly reflections.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <img src="images/soulism-logo.png" alt="Soulism" style="height:40px; width:auto;">
+    </a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Soulism</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:20px;">
+  <div class="wrap">
+    <span class="eyebrow">Get In Touch</span>
+    <h1 style="max-width:700px;">This isn't a support inbox.</h1>
+    <p class="lede" style="font-size:1.15rem;">If a book or an idea genuinely mattered to you, I'd like to hear about it. Reach out.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px;">
+  <div class="wrap hero-grid" style="align-items:start;">
+
+    <div>
+      <h2>Send a message</h2>
+      <div data-fs-success style="display:none; padding:16px 18px; background:#EAF6EC; border:1px solid #B9DFC0; color:#1F5C2A; border-radius:2px; margin-bottom:20px; font-weight:500;"></div>
+      <div data-fs-error style="display:none; padding:16px 18px; background:#FBEAEA; border:1px solid #E9B4B4; color:#8A1F1F; border-radius:2px; margin-bottom:20px; font-weight:500;"></div>
+
+      <form id="contact-form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" data-fs-field required>
+          <span data-fs-error="name" style="color:#C0392B; font-size:0.85rem;"></span>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="_replyto" data-fs-field required>
+          <span data-fs-error="_replyto" style="color:#C0392B; font-size:0.85rem;"></span>
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" data-fs-field required></textarea>
+          <span data-fs-error="message" style="color:#C0392B; font-size:0.85rem;"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" data-fs-submit-btn>Send Message</button>
+      </form>
+    </div>
+
+    <div>
+      <div class="card" style="margin-bottom:24px;">
+        <h3>Email</h3>
+        <p><a href="mailto:thesoulism@gmail.com" style="color:var(--magenta); font-weight:600;">thesoulism@gmail.com</a></p>
+      </div>
+      <div class="card" style="margin-bottom:24px;">
+        <h3>Follow Soulism</h3>
+        <p style="margin-bottom:14px;">
+          <a href="https://www.instagram.com/thesoulism_" target="_blank" rel="noopener" style="display:block; margin-bottom:8px;">Instagram — @thesoulism_</a>
+          <a href="https://www.facebook.com/TheSoulism" target="_blank" rel="noopener" style="display:block; margin-bottom:8px;">Facebook — TheSoulism</a>
+          <a href="https://youtube.com/@thesoulism" target="_blank" rel="noopener" style="display:block;">YouTube — @thesoulism</a>
+        </p>
+      </div>
+      <div class="card">
+        <h3>Newsletter</h3>
+        <p style="margin-bottom:16px;">One honest reflection a week. No noise, no selling.</p>
+        <div data-fs-success style="display:none; padding:12px 14px; background:#EAF6EC; border:1px solid #B9DFC0; color:#1F5C2A; border-radius:2px; margin-bottom:14px; font-size:0.9rem; font-weight:500;"></div>
+        <form id="newsletter-form-contact" style="display:flex; gap:10px; flex-wrap:wrap;">
+          <input type="email" name="email" data-fs-field placeholder="you@email.com" required style="flex:1; min-width:180px; padding:12px 14px; border:1.5px solid var(--line); border-radius:2px; font-family:var(--body); font-size:0.95rem;">
+          <button type="submit" class="btn btn-outline" data-fs-submit-btn>Subscribe</button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/soulism-logo.png" alt="Soulism" style="height:44px; width:auto; margin-bottom:16px; filter:invert(1);">
+        <p style="color:#B9B2C6; max-width:340px;">A modern philosophy of awakened consciousness, honest ethics, and self-authored meaning.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Soulism</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/thesoulism_" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TheSoulism" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://youtube.com/@thesoulism" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="mailto:thesoulism@gmail.com">thesoulism@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Soulism. All rights reserved.</span>
+      <span>Founded by Shashank</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navtoggle').addEventListener('click', function(){
+    document.getElementById('navlinks').classList.toggle('open');
+  });
+
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', {
+    formElement: '#contact-form',
+    formId: 'mrenlzpp',
+    onSuccess: function(){
+      var msg = document.querySelector('#contact-form').previousElementSibling.previousElementSibling;
+      if (msg) { msg.textContent = "Thank you — your message has been sent. I'll get back to you personally."; msg.style.display = 'block'; }
+    }
+  });
+  formspree('initForm', {
+    formElement: '#newsletter-form-contact',
+    formId: 'mrenlzpp',
+    onSuccess: function(){
+      var msg = document.querySelector('#newsletter-form-contact').previousElementSibling;
+      if (msg) { msg.textContent = "You're subscribed. Look out for your first reflection soon."; msg.style.display = 'block'; }
+    }
+  });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+</body>
+</html>

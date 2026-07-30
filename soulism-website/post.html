@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="page-title">Soulism Blog</title>
+<meta id="meta-desc" name="description" content="A reflection from the Soulism blog.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .post-body{max-width:700px; margin:0 auto;}
+  .post-body h2{margin-top:1.6em;}
+  .post-body p{font-size:1.05rem; line-height:1.75;}
+  .post-body em{font-family:var(--display); font-style:italic;}
+  .post-body blockquote{
+    border-left:3px solid var(--magenta); margin:28px 0; padding:4px 0 4px 22px;
+    font-family:var(--display); font-style:italic; font-size:1.2rem; color:var(--ink-soft);
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <nav class="nav">
+    <a href="index.html" class="logo">
+      <img src="images/soulism-logo.png" alt="Soulism logo" style="height:40px; width:auto;">
+    </a>
+    <ul class="navlinks" id="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Soulism</a></li>
+      <li><a href="books.html">Books</a></li>
+      <li><a href="blog.html" class="active">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
+  </nav>
+</header>
+
+<section class="hero" style="padding-bottom:20px;">
+  <div class="wrap post-body">
+    <a href="blog.html" style="font-size:0.9rem; color:var(--muted); text-decoration:none;">← Back to Blog</a>
+    <div id="post-meta" style="margin-top:18px;"></div>
+    <h1 id="post-title" style="max-width:700px; margin-top:10px;">Loading…</h1>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="wrap post-body" id="post-content">
+    <p style="color:var(--muted);">Loading post…</p>
+  </div>
+</section>
+
+<section class="section-dark center">
+  <div class="wrap">
+    <h2>More from Soulism</h2>
+    <p style="max-width:520px; margin:0 auto 28px;">Keep exploring the philosophy, or bring your own question to the Help Center.</p>
+    <a href="blog.html" class="btn btn-primary" style="background:var(--paper); color:var(--night);">Back to All Posts →</a>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <img src="images/soulism-logo.png" alt="Soulism" style="height:44px; width:auto; margin-bottom:16px; filter:invert(1);">
+        <p style="color:#B9B2C6; max-width:340px;">A modern philosophy of awakened consciousness, honest ethics, and self-authored meaning.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About Soulism</a></li>
+          <li><a href="books.html">Books</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/thesoulism_" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/TheSoulism" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://youtube.com/@thesoulism" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="mailto:thesoulism@gmail.com">thesoulism@gmail.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Soulism. All rights reserved.</span>
+      <span>Founded by Shashank</span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  document.getElementById('navtoggle').addEventListener('click', function(){
+    document.getElementById('navlinks').classList.toggle('open');
+  });
+
+  // ===================================================================
+  // IMPORTANT: replace these two values with your real GitHub username
+  // and repository name (same as in blog.html) so posts can be found.
+  // ===================================================================
+  const GITHUB_OWNER = "YOUR_GITHUB_USERNAME";
+  const GITHUB_REPO  = "YOUR_REPO_NAME";
+  const BRANCH = "main";
+
+  function parseFrontmatter(raw) {
+    const match = raw.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
+    if (!match) return { data: {}, body: raw };
+    const yaml = match[1];
+    const body = match[2];
+    const data = {};
+    yaml.split('\n').forEach(line => {
+      const idx = line.indexOf(':');
+      if (idx === -1) return;
+      const key = line.slice(0, idx).trim();
+      let val = line.slice(idx + 1).trim();
+      val = val.replace(/^["']|["']$/g, '');
+      data[key] = val;
+    });
+    return { data, body };
+  }
+
+  async function loadPost() {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get('post');
+    const contentEl = document.getElementById('post-content');
+    if (!slug) {
+      contentEl.innerHTML = '<p>No post specified.</p>';
+      return;
+    }
+    try {
+      const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/posts/${slug}.md`;
+      const res = await fetch(rawUrl);
+      if (!res.ok) throw new Error('Post not found');
+      const raw = await res.text();
+      const { data, body } = parseFrontmatter(raw);
+
+      document.title = (data.title || 'Post') + ' — Soulism Blog';
+      document.getElementById('page-title').textContent = (data.title || 'Post') + ' — Soulism Blog';
+      document.getElementById('meta-desc').setAttribute('content', data.excerpt || '');
+      document.getElementById('post-title').textContent = data.title || 'Untitled';
+
+      const dateStr = data.date ? new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
+      document.getElementById('post-meta').innerHTML =
+        `<span class="eyebrow">${dateStr}${data.tag ? ' · ' + data.tag : ''}</span>`;
+
+      contentEl.innerHTML = marked.parse(body);
+    } catch (err) {
+      contentEl.innerHTML = '<p style="color:var(--muted);">This post could not be loaded. (' + err.message + ')</p>';
+    }
+  }
+
+  loadPost();
+</script>
+</body>
+</html>
