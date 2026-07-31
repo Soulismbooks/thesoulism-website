@@ -99,13 +99,10 @@
     document.getElementById('navlinks').classList.toggle('open');
   });
 
-  // ===================================================================
-  // IMPORTANT: replace these two values with your real GitHub username
-  // and repository name (same as in blog.html) so posts can be found.
-  // ===================================================================
-  const GITHUB_OWNER = "YOUR_GITHUB_USERNAME";
-  const GITHUB_REPO  = "YOUR_REPO_NAME";
+  const GITHUB_OWNER = "Soulismbooks";
+  const GITHUB_REPO  = "thesoulism-website";
   const BRANCH = "main";
+  const POSTS_PATH = "soulism-website/posts";
 
   function parseFrontmatter(raw) {
     const match = raw.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
@@ -133,7 +130,7 @@
       return;
     }
     try {
-      const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/posts/${slug}.md`;
+      const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/${POSTS_PATH}/${slug}.md`;
       const res = await fetch(rawUrl);
       if (!res.ok) throw new Error('Post not found');
       const raw = await res.text();
