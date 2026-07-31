@@ -127,7 +127,7 @@
   async function loadPosts() {
     const listEl = document.getElementById('posts-list');
     try {
-      const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/posts?ref=${BRANCH}`;
+      https://api.github.com/repos/undefined/undefined/contents/posts?ref=undefined;
       const res = await fetch(apiUrl);
       if (!res.ok) throw new Error('Could not reach GitHub (' + res.status + ')');
       const files = await res.json();
