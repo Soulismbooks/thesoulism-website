@@ -93,13 +93,10 @@
     document.getElementById('navlinks').classList.toggle('open');
   });
 
-  // ===================================================================
-  // IMPORTANT: replace these two values with your real GitHub username
-  // and repository name so the blog can find your posts.
-  // ===================================================================
-  const GITHUB_OWNER = "YOUR_GITHUB_USERNAME";
-  const GITHUB_REPO  = "YOUR_REPO_NAME";
+  const GITHUB_OWNER = "Soulismbooks";
+  const GITHUB_REPO  = "thesoulism-website";
   const BRANCH = "main";
+  const POSTS_PATH = "soulism-website/posts";
 
   function parseFrontmatter(raw) {
     const match = raw.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
@@ -127,7 +124,7 @@
   async function loadPosts() {
     const listEl = document.getElementById('posts-list');
     try {
-      https://api.github.com/repos/undefined/undefined/contents/posts?ref=undefined;
+      const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${POSTS_PATH}?ref=${BRANCH}`;
       const res = await fetch(apiUrl);
       if (!res.ok) throw new Error('Could not reach GitHub (' + res.status + ')');
       const files = await res.json();
@@ -139,7 +136,7 @@
       }
 
       const posts = await Promise.all(mdFiles.map(async file => {
-        const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/posts/${file.name}`;
+        const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/${POSTS_PATH}/${file.name}`;
         const rawRes = await fetch(rawUrl);
         const raw = await rawRes.text();
         const { data } = parseFrontmatter(raw);
