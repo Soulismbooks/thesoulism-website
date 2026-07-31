@@ -10,7 +10,7 @@ backend:
   repo: Soulismbooks/thesoulism-website
   branch: main
   base_url: https://soulism-oauth.soulism.workers.dev
-auth_endpoint: auth
+
   auth_endpoint: auth
 
 media_folder: "images/blog"
