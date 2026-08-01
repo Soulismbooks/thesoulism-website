@@ -1,3 +1,12 @@
+---
+title: What is Soulism? A Modern Philosophy for Conscious Living
+date: 2026-08-01T22:05:00.000+05:30
+tag: Fear
+excerpt: Most people spend their lives searching for truth in books, traditions,
+  and beliefs. Soulism invites you to begin somewhere else—within your own
+  awareness. This article explains why awareness, not belief, is the foundation
+  of a meaningful life.
+---
 <style>
 .hero{
     background:linear-gradient(135deg,#0b3d91,#16a34a);
