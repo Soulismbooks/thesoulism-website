@@ -8,18 +8,6 @@ image: ''
 
 ![](/images/blog/111.png)
 
-`<!DOCTYPE html>`
-
-`<html lang="en">`
-
-`<head>`
-
-`<meta charset="UTF-8">`
-
-`<meta name="viewport" content="width=device-width, initial-scale=1.0">`
-
-`<title>Why Awareness Matters More Than Belief | Soulism</title>`
-
 `<style>`
 
 `body{`
