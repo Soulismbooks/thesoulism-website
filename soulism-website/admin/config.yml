@@ -27,4 +27,23 @@ collections:
         options: ["Belief", "Fear", "Meaning", "Money", "Relationships", "Purpose"]
       - { label: "Excerpt (shown on the blog list)", name: "excerpt", widget: "text" }
       - { label: "Post Image (optional)", name: "image", widget: "image", required: false }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        modes: ["rich_text", "raw"]
+        buttons:
+          - bold
+          - italic
+          - code
+          - link
+          - heading-one
+          - heading-two
+          - heading-three
+          - heading-four
+          - quote
+          - code-block
+          - bulleted-list
+          - numbered-list
+        editor_components:
+          - image
+          - code-block
