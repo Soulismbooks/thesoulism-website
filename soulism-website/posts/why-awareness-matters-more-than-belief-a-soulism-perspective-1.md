@@ -6,6 +6,8 @@ excerpt: Most people spend their lives searching for truth in books, traditions,
 image: ''
 ---
 
+![](/images/blog/111.png)
+
 <style>
 
 .hero{
