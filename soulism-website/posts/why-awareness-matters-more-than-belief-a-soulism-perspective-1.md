@@ -327,7 +327,3 @@ image: ''
 `}`
 
 `</script>`
-
-`</body>`
-
-`</html>`
