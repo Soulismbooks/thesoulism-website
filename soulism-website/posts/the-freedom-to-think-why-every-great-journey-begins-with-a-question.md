@@ -10,286 +10,272 @@ image: ''
 
 <style>
 
-.hero{
+.blog-container{
 
-    background:linear-gradient(135deg,#0b3d91,#16a34a);
-
-    color:#fff;
-
-    text-align:center;
-
-    padding:70px 20px;
-
-    border-radius:12px;
-
-}
-
-.hero h1{
-
-    font-size:36px;
-
-    margin-bottom:20px;
-
-}
-
-.hero p{
-
-    max-width:800px;
+    max-width:850px;
 
     margin:auto;
 
+    padding:20px;
+
+    line-height:1.9;
+
+    color:#333;
+
     font-size:18px;
 
 }
 
-.card{
+.blog-container h2{
 
-    background:white;
+    margin-top:45px;
 
-    padding:30px;
+    color:#1f2937;
 
-    margin-bottom:30px;
+    font-size:34px;
+
+}
+
+.blog-container h3{
+
+    margin-top:35px;
+
+    color:#0f766e;
+
+}
+
+.blog-container p{
+
+    margin:18px 0;
+
+}
+
+.blog-container img{
+
+    width:100%;
 
     border-radius:12px;
 
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    margin:25px 0;
 
 }
 
-.card h2{
+.quote-box{
 
-    color:#0b3d91;
+    border-left:5px solid #16a34a;
 
-}
+    background:#f8fafc;
 
-.quote{
-
-    background:#16a34a;
-
-    color:white;
-
-    padding:30px;
-
-    border-radius:10px;
-
-    text-align:center;
-
-    font-size:24px;
-
-    font-style:italic;
+    padding:25px;
 
     margin:40px 0;
 
+    font-size:22px;
+
+    font-style:italic;
+
+    color:#0f172a;
+
 }
 
-ul{
+.highlight-box{
 
-    padding-left:25px;
+    background:#ecfdf5;
+
+    border:1px solid #bbf7d0;
+
+    padding:25px;
+
+    border-radius:10px;
+
+    margin:35px 0;
 
 }
 
-button{
+.highlight-box ul{
 
-    background:#0b3d91;
+    margin:0;
+
+    padding-left:22px;
+
+}
+
+.soulism-thought{
+
+    margin-top:45px;
+
+    padding:30px;
+
+    border-radius:12px;
+
+    text-align:center;
+
+    background:#0f766e;
 
     color:white;
 
+}
+
+.soulism-thought h3{
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+hr{
+
+    margin:45px 0;
+
     border:none;
 
-    padding:15px 30px;
-
-    border-radius:8px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-button:hover{
-
-    background:#16a34a;
-
-}
-
-#thought{
-
-    margin-top:25px;
-
-    font-size:22px;
-
-    color:#0b3d91;
-
-    font-weight:bold;
+    border-top:1px solid #ddd;
 
 }
 
 </style>
 
-<section class="hero">
+<div class="blog-container">
 
-<h1>The Freedom to Think</h1>
+<p><strong>5 min read</strong></p>
+
+<img src="/images/blog/the-freedom-to-think.webp"
+
+alt="A person sitting on a mountain overlooking the sunrise, symbolizing freedom of thought, awareness, and self-discovery in Soulism.">
 
 <p>
 
 Every great journey begins with a question.
 
-Soulism encourages you to think independently,
+Not with certainty.
 
-question fearlessly,
+Not with belief.
 
-and discover truth through your own awareness.
+But with the courage to ask,
+
+<strong>"What if there is another way?"</strong>
 
 </p>
 
-</section>
+<h2>Why Questions Matter</h2>
 
-<div class="card">
+<p>
 
-<h2>The Courage to Question</h2>
+Human progress has always started with people who questioned accepted ideas.
+
+Science evolved because someone doubted old explanations.
+
+Philosophy grew because someone searched for deeper meaning.
+
+Personal transformation begins when we question our own assumptions.
+
+</p>
 
 <p>
 
 Questioning is not rebellion.
 
-Questioning is not disrespect.
-
-Questioning is the beginning of understanding.
-
-Every great discovery in human history started with someone who dared to ask a simple question.
-
-Without questions, there is no growth.
+It is the beginning of understanding.
 
 </p>
 
+<div class="quote-box">
+
+"Freedom does not begin when someone gives you permission.
+
+Freedom begins when you allow yourself to think."
+
 </div>
 
-<div class="card">
-
-<h2>Borrowed Answers vs Personal Understanding</h2>
+<h2>The Soulism Perspective</h2>
 
 <p>
 
-Many beliefs come from family, religion, education, and society.
+Soulism does not ask anyone to reject religion, culture, or tradition.
 
-These influences shape us, but they should never replace our own awareness.
-
-Soulism encourages every person to discover truth through direct experience rather than inherited beliefs.
+Instead, it invites every individual to become aware before accepting any belief.
 
 </p>
 
-</div>
+<p>
 
-<div class="card">
+Awareness is more valuable than blind agreement.
 
-<h2>Awareness Is Greater Than Belief</h2>
+Experience is more powerful than inherited ideas.
 
-<ul>
+</p>
 
-<li>Beliefs can be borrowed.</li>
+<div class="highlight-box">
 
-<li>Awareness must be experienced.</li>
-
-<li>Belief may divide people.</li>
-
-<li>Awareness brings understanding.</li>
-
-<li>Belief changes with opinions.</li>
-
-<li>Awareness creates lasting wisdom.</li>
-
-</ul>
-
-</div>
-
-<div class="quote">
-
-"Freedom does not begin when someone gives you answers.
-
-Freedom begins when you discover the courage to ask your own questions."
-
-</div>
-
-<div class="card">
-
-<h2>Live the Soulism Way</h2>
+<h3>Four Principles of Free Thinking</h3>
 
 <ul>
 
 <li>Question respectfully.</li>
 
-<li>Observe before believing.</li>
+<li>Observe before judging.</li>
 
-<li>Learn through experience.</li>
+<li>Learn through direct experience.</li>
 
-<li>Practice compassion.</li>
-
-<li>Become more aware every day.</li>
+<li>Remain open to growth.</li>
 
 </ul>
 
 </div>
 
-<div class="card">
+<h2>The Courage to Think Independently</h2>
+
+<p>
+
+Independent thinking is often uncomfortable.
+
+It requires honesty.
+
+It requires patience.
+
+Most importantly, it requires the willingness to admit that we may be wrong.
+
+</p>
+
+<p>
+
+That willingness is not weakness.
+
+It is wisdom.
+
+</p>
+
+<hr>
 
 <h2>Conclusion</h2>
 
 <p>
 
-Soulism does not ask you to reject religion or tradition.
+Soulism teaches that genuine freedom is not merely the freedom to speak.
 
-It simply asks one question:
+It is the freedom to think without fear.
 
-<b>Have you experienced the truth yourself?</b>
+When awareness becomes your guide instead of blind belief,
 
-A conscious life begins when awareness becomes your guide instead of fear.
+life becomes a journey of continuous discovery.
 
 </p>
 
-<button onclick="newThought()">
+<div class="soulism-thought">
 
-Generate Soulism Thought
+<h3>Soulism Thought</h3>
 
-</button>
+<p>
 
-<div id="thought"></div>
+<strong>
+
+"Every great journey begins with one honest question."
+
+</strong>
+
+</p>
 
 </div>
 
-<script>
-
-const thoughts=[
-
-"Every great journey begins with a question.",
-
-"Freedom starts when you begin to think for yourself.",
-
-"Borrowed beliefs cannot replace personal awareness.",
-
-"Awareness transforms curiosity into wisdom.",
-
-"The courage to question is the beginning of freedom.",
-
-"Truth is discovered, not inherited.",
-
-"The highest intelligence is conscious awareness.",
-
-"Question. Observe. Understand. Grow.",
-
-"Your awareness is your greatest teacher.",
-
-"A free mind is born from honest questions."
-
-];
-
-function newThought(){
-
-const random=Math.floor(Math.random()\*thoughts.length);
-
-document.getElementById("thought").innerHTML=thoughts[random];
-
-}
-
-</script>
+</div>
