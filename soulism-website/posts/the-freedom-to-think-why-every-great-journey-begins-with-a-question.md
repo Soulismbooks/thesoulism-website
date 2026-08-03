@@ -6,7 +6,7 @@ excerpt: Every meaningful transformation begins with a question. Soulism encoura
 image: ''
 ---
 
-![A person sits on a mountaintop at sunrise, overlooking a peaceful valley while reflecting with a notebook and coffee mug. The image symbolizes freedom of thought, self-discovery, awareness, and the Soulism philosophy that every great journey begins with a question.](/images/blog/1.png)
+![A person sits on a mountaintop at sunrise, overlooking a peaceful valley while reflecting with a notebook and coffee mug. The image symbolizes freedom of thought, self-discovery, awareness, and the Soulism philosophy that every great journey begins with a question.](/images/blog/111.png)
 
 <style>
 
