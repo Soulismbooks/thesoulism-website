@@ -8,171 +8,235 @@ image: /images/blog/111.png
 
 <style>
 
-.hero{
+.article{
 
-    background:linear-gradient(135deg,#0b3d91,#16a34a);
+    max-width:850px;
 
-    color:#fff;
+    margin:0 auto;
 
-    text-align:center;
+    padding:20px;
 
-    padding:70px 20px;
+    color:#444;
+
+    font-size:19px;
+
+    line-height:1.9;
+
+}
+
+.article h2{
+
+    font-size:42px;
+
+    color:#111827;
+
+    margin:45px 0 20px;
+
+    line-height:1.25;
+
+}
+
+.article h3{
+
+    color:#0f766e;
+
+    font-size:28px;
+
+    margin:40px 0 15px;
+
+}
+
+.article p{
+
+    margin:18px 0;
+
+}
+
+.article img{
+
+    width:100%;
 
     border-radius:12px;
 
-}
-
-.hero h1{
-
-    font-size:36px;
-
-    margin-bottom:20px;
-
-}
-
-.hero p{
-
-    max-width:800px;
-
-    margin:auto;
-
-    font-size:18px;
-
-}
-
-.card{
-
-    background:white;
-
-    padding:30px;
-
-    margin-bottom:30px;
-
-    border-radius:12px;
-
-    box-shadow:0 8px 20px rgba(0,0,0,.08);
-
-}
-
-.card h2{
-
-    color:#0b3d91;
+    margin:30px 0;
 
 }
 
 .quote{
 
-    background:#16a34a;
+    border-left:5px solid #16a34a;
 
-    color:white;
+    background:#f8fafc;
 
-    padding:30px;
+    padding:28px;
 
-    border-radius:10px;
-
-    text-align:center;
+    margin:40px 0;
 
     font-size:24px;
 
     font-style:italic;
 
-    margin:40px 0;
+    color:#1f2937;
 
 }
 
-ul{
+.points{
 
-    padding-left:25px;
+    background:#f9fafb;
+
+    border:1px solid #e5e7eb;
+
+    border-radius:10px;
+
+    padding:25px;
+
+    margin:35px 0;
 
 }
 
-button{
+.points ul{
 
-    background:#0b3d91;
+    padding-left:22px;
+
+}
+
+.points li{
+
+    margin:12px 0;
+
+}
+
+.thought{
+
+    margin-top:50px;
+
+    background:#0f766e;
 
     color:white;
 
+    padding:35px;
+
+    text-align:center;
+
+    border-radius:12px;
+
+}
+
+.thought h3{
+
+    color:white;
+
+    margin-bottom:15px;
+
+}
+
+hr{
+
+    margin:50px 0;
+
     border:none;
 
-    padding:15px 30px;
-
-    border-radius:8px;
-
-    font-size:18px;
-
-    cursor:pointer;
-
-    transition:.3s;
+    border-top:1px solid #ddd;
 
 }
 
-button:hover{
+@media(max-width:768px){
 
-    background:#16a34a;
+.article{
+
+font-size:18px;
+
+padding:15px;
 
 }
 
-#thought{
+.article h2{
 
-    margin-top:25px;
+font-size:34px;
 
-    font-size:22px;
+}
 
-    color:#0b3d91;
+.article h3{
 
-    font-weight:bold;
+font-size:24px;
+
+}
+
+.quote{
+
+font-size:20px;
+
+padding:20px;
+
+}
 
 }
 
 </style>
 
-<section class="hero">
+<div class="article">
 
-<h1>Why Awareness Matters More Than Belief</h1>
+<p><strong>5 min read</strong></p>
 
-<p>Soulism teaches that truth is not inherited from tradition. It is discovered through direct awareness and conscious living.</p>
+<img src="/images/blog/awareness-belief.webp"
 
-</section>
+alt="Awareness and conscious living according to Soulism philosophy">
 
-<div class="card">
+<h2>Why Awareness Matters More Than Belief</h2>
 
-<h2>Most people are taught what to believe.</h2>
+<p>
 
-<p>From childhood, we inherit religions, customs, political ideas, and social expectations. But very few people are taught how to observe themselves. Soulism begins where blind belief ends. It encourages every person to become conscious rather than simply obedient.</p>
+Most people are taught what to believe.
 
-</div>
+Very few are taught how to observe.
 
-<div class="card">
+From childhood we inherit religions, traditions, political ideas and social expectations. These beliefs become part of our identity before we ever examine them for ourselves.
 
-<h2>The Difference Between Belief and Awareness</h2>
+Soulism begins where blind belief ends.
 
-<ul>
+</p>
 
-<li>Belief depends on others.</li>
+<h3>Belief vs Awareness</h3>
 
-<li>Awareness depends on direct experience.</li>
+<p>
 
-<li>Belief divides people.</li>
+Belief can provide comfort.
 
-<li>Awareness connects people.</li>
+Awareness provides clarity.
 
-<li>Belief can be inherited.</li>
+Belief is borrowed.
 
-<li>Awareness must be discovered.</li>
+Awareness is discovered.
 
-</ul>
+One depends on authority.
 
-</div>
+The other depends on direct experience.
+
+</p>
 
 <div class="quote">
 
-"The greatest truth is not what others tell you. It is what you discover within yourself."
+"The greatest truth is not what others tell you.
+
+It is what you discover within yourself."
 
 </div>
 
-<div class="card">
+<h3>The Soulism Perspective</h3>
 
-<h2>Five Principles of Conscious Living</h2>
+<p>
+
+Soulism does not encourage people to reject religion.
+
+Neither does it ask anyone to accept ideas without questioning.
+
+Instead, it encourages conscious observation, personal experience and continuous learning.
+
+</p>
+
+<div class="points">
+
+<h3>Five Principles of Conscious Living</h3>
 
 <ul>
 
@@ -190,44 +254,36 @@ button:hover{
 
 </div>
 
-<div class="card">
+<hr>
 
-<h2>Conclusion</h2>
+<h3>Conclusion</h3>
 
-<p>A conscious human being does not reject religion. Neither does he blindly accept it. He simply chooses awareness over fear, experience over tradition, and understanding over imitation. That is the Soulism way.</p>
+<p>
 
-<button onclick="newThought()">Generate Soulism Thought</button>
+A conscious person does not live according to fear.
 
-<div id="thought"></div>
+They live according to awareness.
+
+When understanding replaces imitation, freedom naturally follows.
+
+That is the Soulism way.
+
+</p>
+
+<div class="thought">
+
+<h3>Soulism Thought</h3>
+
+<p>
+
+<strong>
+
+"Awareness is the light that turns belief into understanding."
+
+</strong>
+
+</p>
 
 </div>
 
-<script>
-
-const thoughts=[
-
-"Truth begins where blind belief ends.",
-
-"Awareness is the highest form of freedom.",
-
-"Know yourself before trying to change the world.",
-
-"Real spirituality begins with observation.",
-
-"Experience is greater than inherited belief.",
-
-"The soul grows through awareness, not obedience.",
-
-"Every answer begins with an honest question."
-
-];
-
-function newThought(){
-
-const random=Math.floor(Math.random()\*thoughts.length);
-
-document.getElementById("thought").innerHTML=thoughts[random];
-
-}
-
-</script>
+</div>
