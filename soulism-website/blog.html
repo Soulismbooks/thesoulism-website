@@ -12,6 +12,20 @@
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
+<style>
+  .post-card {
+    display: block;
+  }
+  .post-thumb {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: block;
+    background: #eee;
+  }
+</style>
 </head>
 <body>
 
@@ -145,7 +159,8 @@
           title: data.title || file.name,
           date: data.date ? new Date(data.date) : new Date(0),
           tag: data.tag || '',
-          excerpt: data.excerpt || ''
+          excerpt: data.excerpt || '',
+          image: data.image || ''
         };
       }));
 
@@ -162,6 +177,7 @@
         const filtered = filterTag ? posts.filter(p => p.tag === filterTag) : posts;
         listEl.innerHTML = filtered.map(p => `
           <a href="post.html?post=${encodeURIComponent(p.slug)}" class="post-card">
+            ${p.image ? `<img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.title)}" class="post-thumb" loading="lazy">` : ''}
             <span class="post-date">${p.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}${p.tag ? ' · ' + escapeHtml(p.tag) : ''}</span>
             <h3>${escapeHtml(p.title)}</h3>
             <p>${escapeHtml(p.excerpt)}</p>
