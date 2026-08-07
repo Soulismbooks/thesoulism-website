@@ -1,4 +1,5 @@
 url: "https://thesoulism.com"
+timezone: "America/New_York"
 defaults:
   - scope:
       path: ""

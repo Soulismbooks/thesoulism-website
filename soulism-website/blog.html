@@ -1,83 +1,47 @@
+---
+---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Title & Description -->
-<title>Blog — Soulism | Reflections on Consciousness & Meaning</title>
+<title>Blog — Soulism | Reflections on Consciousness</title>
 <meta name="description" content="Reflections on consciousness, fear, meaning, and money from the Soulism philosophy. Read short, honest ideas from Shashank.">
 
-<!-- 🟢 NEW: Search Engine Crawling & Indexing -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <link rel="canonical" href="https://thesoulism.com/blog.html">
 
-<!-- Open Graph / Social Preview Tags -->
+<!-- USA Audience & Open Graph Tags -->
 <meta property="og:title" content="Blog — Soulism">
 <meta property="og:description" content="Short, honest reflections from the Soulism philosophy.">
 <meta property="og:type" content="blog">
+<meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://thesoulism.com/blog.html">
 <meta property="og:image" content="https://thesoulism.com/images/soulism-logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta property="og:site_name" content="Soulism">
 
-<!-- 🟢 NEW: Twitter Card Tags -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Blog — Soulism">
 <meta name="twitter:description" content="Short, honest reflections from the Soulism philosophy.">
 <meta name="twitter:image" content="https://thesoulism.com/images/soulism-logo.png">
 
-<!-- Favicons & Styles -->
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 
 <style>
-  .post-card {
-    display: block;
-  }
-  .post-thumb {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 12px;
-    display: block;
-    background: #eee;
-  }
+  .post-card { display: block; text-decoration: none; color: inherit; margin-bottom: 50px; transition: transform 0.2s ease; }
+  .post-card:hover h3 { color: #16a34a; }
+  .post-thumb { width: 100%; height: 260px; object-fit: cover; border-radius: 10px; margin-bottom: 16px; display: block; background: #eee; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
 </style>
-
-<!-- 🟢 NEW: Schema Markup (Structured Data for Google) -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Blog",
-  "name": "Soulism Blog",
-  "url": "https://thesoulism.com/blog.html",
-  "description": "Reflections on consciousness, fear, meaning, and money from the Soulism philosophy.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Soulism",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://thesoulism.com/images/soulism-logo.png"
-    }
-  },
-  "author": {
-    "@type": "Person",
-    "name": "Shashank"
-  }
-}
-</script>
 </head>
 <body>
 
 <header class="site">
   <nav class="nav">
     <a href="index.html" class="logo">
-      <img src="images/soulism-logo.png" alt="Soulism logo" style="height:40px; width:auto;">
+      <img src="images/soulism-logo.png" alt="Soulism" style="height:40px; width:auto;">
     </a>
     <ul class="navlinks" id="navlinks">
       <li><a href="index.html">Home</a></li>
@@ -86,64 +50,44 @@
       <li><a href="blog.html" class="active">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
   </nav>
 </header>
 
 <section class="hero" style="padding-bottom:20px;">
   <div class="wrap">
-    <span class="eyebrow">Reflections</span>
-    <h1 style="max-width:760px;">Short, honest ideas — one at a time.</h1>
-    <p class="lede" style="font-size:1.15rem;">No content calendar, no filler. Just Soulism thinking worked out in public.</p>
+    <span class="eyebrow" style="color:#16a34a; font-weight:600;">Reflections</span>
+    <h1 style="max-width:760px; font-size:3.5rem;">Short, honest ideas — one at a time.</h1>
+    <p class="lede" style="font-size:1.25rem; color:#4b5563;">No content calendar, no filler. Just Soulism thinking worked out in public.</p>
   </div>
 </section>
 
-<section style="padding-top:20px;">
+<section style="padding-top:30px;">
   <div class="wrap" style="max-width:760px;">
-
-    <div id="tag-filters" style="margin-bottom:10px;"></div>
-
+    
+    <!-- 🟢 AUTOMATIC POST LISTING (मशीन यहाँ से सारे ब्लॉग्स दिखाएगी) -->
     <div id="posts-list">
-      <p style="color:var(--muted);">Loading posts…</p>
-    </div>
-
-    <div class="center" style="margin-top:60px; padding:40px; border:1px dashed var(--line);">
-      <p style="margin:0; color:var(--muted);">New reflections are added regularly. Subscribe on the <a href="contact.html" style="color:var(--magenta); font-weight:600;">Contact page</a> to get them by email.</p>
+      {% for post in site.posts %}
+      <a href="{{ post.url }}" class="post-card">
+        {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}" class="post-thumb" loading="lazy">
+        {% endif %}
+        <span class="eyebrow" style="margin-bottom:10px; display:block; color:#6b7280; font-size:0.95rem;">
+            {{ post.date | date: "%B %d, %Y" }} {% if post.tag %} · {{ post.tag }}{% endif %}
+        </span>
+        <h3 style="margin: 0 0 12px 0; font-size:1.8rem; line-height:1.3;">{{ post.title }}</h3>
+        <p style="margin: 0; line-height: 1.7; color:#374151; font-size:1.1rem;">{{ post.excerpt | strip_html }}</p>
+      </a>
+      {% else %}
+      <p style="color:#6b7280; font-size:1.1rem;">No reflections posted yet. Check back soon.</p>
+      {% endfor %}
     </div>
 
   </div>
 </section>
 
-<footer class="site">
+<footer class="site" style="margin-top: 80px; padding: 40px 0; border-top: 1px solid #e5e7eb; text-align: center;">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <img src="images/soulism-logo.png" alt="Soulism" style="height:44px; width:auto; margin-bottom:16px; filter:invert(1);">
-        <p style="color:#B9B2C6; max-width:340px;">A modern philosophy of awakened consciousness, honest ethics, and self-authored meaning.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Soulism</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/thesoulism_" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.facebook.com/TheSoulism" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://youtube.com/@thesoulism" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="mailto:thesoulism@gmail.com">thesoulism@gmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Soulism. All rights reserved.</span>
-      <span>Founded by Shashank</span>
-    </div>
+      <p style="color:#6b7280; font-size: 0.95rem; margin:0;">© 2026 Soulism. All rights reserved. | Founded by Shashank</p>
   </div>
 </footer>
 
@@ -151,98 +95,6 @@
   document.getElementById('navtoggle').addEventListener('click', function(){
     document.getElementById('navlinks').classList.toggle('open');
   });
-
-  const GITHUB_OWNER = "Soulismbooks";
-  const GITHUB_REPO  = "thesoulism-website";
-  const BRANCH = "main";
-  const POSTS_PATH = "soulism-website/posts";
-
-  function parseFrontmatter(raw) {
-    const match = raw.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
-    if (!match) return { data: {}, body: raw };
-    const yaml = match[1];
-    const body = match[2];
-    const data = {};
-    yaml.split('\n').forEach(line => {
-      const idx = line.indexOf(':');
-      if (idx === -1) return;
-      const key = line.slice(0, idx).trim();
-      let val = line.slice(idx + 1).trim();
-      val = val.replace(/^["']|["']$/g, '');
-      data[key] = val;
-    });
-    return { data, body };
-  }
-
-  function escapeHtml(str) {
-    const div = document.createElement('div');
-    div.textContent = str;
-    return div.innerHTML;
-  }
-
-  async function loadPosts() {
-    const listEl = document.getElementById('posts-list');
-    try {
-      const apiUrl = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${POSTS_PATH}?ref=${BRANCH}`;
-      const res = await fetch(apiUrl);
-      if (!res.ok) throw new Error('Could not reach GitHub (' + res.status + ')');
-      const files = await res.json();
-      const mdFiles = files.filter(f => f.name.endsWith('.md'));
-
-      if (mdFiles.length === 0) {
-        listEl.innerHTML = '<p style="color:var(--muted);">No posts yet — check back soon.</p>';
-        return;
-      }
-
-      const posts = await Promise.all(mdFiles.map(async file => {
-        const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/${POSTS_PATH}/${file.name}`;
-        const rawRes = await fetch(rawUrl);
-        const raw = await rawRes.text();
-        const { data } = parseFrontmatter(raw);
-        return {
-          slug: file.name.replace(/\.md$/, ''),
-          title: data.title || file.name,
-          date: data.date ? new Date(data.date) : new Date(0),
-          tag: data.tag || '',
-          excerpt: data.excerpt || '',
-          image: data.image || ''
-        };
-      }));
-
-      posts.sort((a, b) => b.date - a.date);
-
-      const tags = [...new Set(posts.map(p => p.tag).filter(Boolean))];
-      const filterEl = document.getElementById('tag-filters');
-      if (tags.length) {
-        filterEl.innerHTML = '<span class="tag-pill" data-tag="" style="cursor:pointer; font-weight:600;">All</span> ' +
-          tags.map(t => `<span class="tag-pill" data-tag="${escapeHtml(t)}" style="cursor:pointer;">${escapeHtml(t)}</span>`).join(' ');
-      }
-
-      function render(filterTag) {
-        const filtered = filterTag ? posts.filter(p => p.tag === filterTag) : posts;
-        listEl.innerHTML = filtered.map(p => `
-          <a href="post.html?post=${encodeURIComponent(p.slug)}" class="post-card">
-            ${p.image ? `<img src="${escapeHtml(p.image)}" alt="${escapeHtml(p.title)}" class="post-thumb" loading="lazy">` : ''}
-            <span class="post-date">${p.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}${p.tag ? ' · ' + escapeHtml(p.tag) : ''}</span>
-            <h3>${escapeHtml(p.title)}</h3>
-            <p>${escapeHtml(p.excerpt)}</p>
-          </a>
-        `).join('');
-      }
-
-      render(null);
-      filterEl.addEventListener('click', e => {
-        const tag = e.target.getAttribute('data-tag');
-        if (tag === null) return;
-        render(tag || null);
-      });
-
-    } catch (err) {
-      listEl.innerHTML = '<p style="color:var(--muted);">Posts will appear here once the blog is connected. (' + escapeHtml(err.message) + ')</p>';
-    }
-  }
-
-  loadPosts();
 </script>
 </body>
 </html>

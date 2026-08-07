@@ -1,138 +1,100 @@
----
-# यह लाइन मशीन को पेज पढ़ने का निर्देश देती है
----
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SEO Title & Description -->
-<title>Blog — Soulism | Reflections on Consciousness & Meaning</title>
-<meta name="description" content="Reflections on consciousness, fear, meaning, and money from the Soulism philosophy. Read short, honest ideas from Shashank.">
+<!-- 🟢 100% AUTOMATIC SEO & META TAGS -->
+<title>{{ page.title }} | Soulism Blog</title>
+<meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
 
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="canonical" href="https://thesoulism.com/blog.html">
-
-<!-- Open Graph / Social Preview Tags -->
-<meta property="og:title" content="Blog — Soulism">
-<meta property="og:description" content="Short, honest reflections from the Soulism philosophy.">
-<meta property="og:type" content="blog">
-<meta property="og:url" content="https://thesoulism.com/blog.html">
-<meta property="og:image" content="https://thesoulism.com/images/soulism-logo.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<!-- 🟢 USA Audience & Social Preview Tags -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ page.image }}">
 <meta property="og:site_name" content="Soulism">
 
-<!-- Twitter Card Tags -->
+<!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Blog — Soulism">
-<meta name="twitter:description" content="Short, honest reflections from the Soulism philosophy.">
-<meta name="twitter:image" content="https://thesoulism.com/images/soulism-logo.png">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
 
-<!-- Favicons & Styles -->
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
-
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="stylesheet" href="/style.css"> 
 <style>
-  .post-card { display: block; text-decoration: none; color: inherit; margin-bottom: 40px; }
-  .post-card:hover h3 { color: var(--magenta); }
-  .post-thumb { width: 100%; height: 220px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; display: block; background: #eee; }
+  .post-body { max-width:700px; margin:0 auto; font-size:1.1rem; line-height:1.8; color:#333; }
+  .post-body h2 { margin-top:1.8em; margin-bottom:0.8em; color:#1f2937; }
+  .post-body img { width:100%; border-radius:12px; margin:25px 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  .post-body blockquote { border-left:4px solid #16a34a; margin:30px 0; padding:10px 0 10px 25px; font-style:italic; font-size:1.25rem; color:#4b5563; background:#f9fafb; }
+  
+  /* Share Buttons CSS */
+  .share-section { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 60px; padding-top: 30px; border-top: 2px dashed #e5e7eb; }
+  .share-section p { margin: 0; font-weight: 600; font-size: 1.1rem; width: 100%; margin-bottom: 5px; color:#111; }
+  .share-btn { padding: 10px 18px; border-radius: 6px; color: white; font-size: 15px; font-weight: 500; border: none; cursor: pointer; transition: 0.2s ease; }
+  .share-btn:hover { opacity: 0.85; }
+  .btn-wa { background: #25D366; }
+  .btn-fb { background: #1877F2; }
+  .btn-tw { background: #1DA1F2; }
+  .btn-copy { background: #64748b; }
 </style>
 </head>
 <body>
 
 <header class="site">
   <nav class="nav">
-    <a href="index.html" class="logo">
-      <img src="images/soulism-logo.png" alt="Soulism logo" style="height:40px; width:auto;">
+    <a href="/index.html" class="logo">
+      <img src="/images/soulism-logo.png" alt="Soulism logo" style="height:40px; width:auto;">
     </a>
     <ul class="navlinks" id="navlinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Soulism</a></li>
-      <li><a href="books.html">Books</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About Soulism</a></li>
+      <li><a href="/books.html">Books</a></li>
+      <li><a href="/blog.html" class="active">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
     </ul>
-    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
   </nav>
 </header>
 
 <section class="hero" style="padding-bottom:20px;">
-  <div class="wrap">
-    <span class="eyebrow">Reflections</span>
-    <h1 style="max-width:760px;">Short, honest ideas — one at a time.</h1>
-    <p class="lede" style="font-size:1.15rem;">No content calendar, no filler. Just Soulism thinking worked out in public.</p>
+  <div class="wrap post-body">
+    <a href="/blog.html" style="font-size:0.95rem; color:#6b7280; text-decoration:none; font-weight:500;">← Back to Blog</a>
+    <div style="margin-top:25px;">
+      <!-- 🟢 मशीन डेट और टैग यहाँ खुद भरेगी -->
+      <span class="eyebrow" style="color:#16a34a; font-weight:600;">
+        {{ page.date | date: "%B %d, %Y" }} {% if page.tag %} · {{ page.tag }} {% endif %}
+      </span>
+    </div>
+    <!-- 🟢 मशीन ब्लॉग का टाइटल यहाँ खुद भरेगी -->
+    <h1 id="post-title" style="max-width:700px; margin-top:10px; font-size: 2.8rem; line-height: 1.2;">{{ page.title }}</h1>
   </div>
 </section>
 
-<section style="padding-top:20px;">
-  <div class="wrap" style="max-width:760px;">
-
-    <!-- 🟢 AUTOMATIC POST LISTING -->
-    <div id="posts-list">
-      {% for post in site.posts %}
-      <a href="{{ post.url }}" class="post-card">
-        {% if post.image %}
-        <img src="{{ post.image }}" alt="{{ post.title }}" class="post-thumb" loading="lazy">
-        {% endif %}
-        <span class="post-date" style="color:var(--muted); font-size:0.9rem; margin-bottom:8px; display:block;">
-          {{ post.date | date: "%B %d, %Y" }} {% if post.tag %} · {{ post.tag }}{% endif %}
-        </span>
-        <h3 style="margin: 0 0 10px 0;">{{ post.title }}</h3>
-        <p style="margin: 0;">{{ post.excerpt | strip_html }}</p>
-      </a>
-      {% else %}
-      <p style="color:var(--muted);">No posts yet — check back soon.</p>
-      {% endfor %}
+<section style="padding-top:0;">
+  <div class="wrap post-body">
+    
+    <!-- 🟢 मशीन आपका पूरा आर्टिकल (Markdown) इस जगह पर डाल देगी -->
+    {{ content }}
+    
+    <!-- Share Buttons -->
+    <div class="share-section">
+        <p>Share this reflection:</p>
+        <button onclick="window.open('https://api.whatsapp.com/send?text=' + encodeURIComponent(document.title + ' - Read here: ' + window.location.href), '_blank')" class="share-btn btn-wa">WhatsApp</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location.href), '_blank')" class="share-btn btn-fb">Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url=' + encodeURIComponent(window.location.href) + '&text=' + encodeURIComponent('Read this reflection: ' + document.title), '_blank')" class="share-btn btn-tw">Twitter</button>
+        <button onclick="navigator.clipboard.writeText(window.location.href); this.innerText='Copied!'; this.style.background='#16a34a'; setTimeout(()=> {this.innerText='Copy Link'; this.style.background='#64748b';}, 2000);" class="share-btn btn-copy">Copy Link</button>
     </div>
-
-    <div class="center" style="margin-top:60px; padding:40px; border:1px dashed var(--line);">
-      <p style="margin:0; color:var(--muted);">New reflections are added regularly. Subscribe on the <a href="contact.html" style="color:var(--magenta); font-weight:600;">Contact page</a> to get them by email.</p>
-    </div>
-
   </div>
 </section>
 
-<footer class="site">
+<footer class="site" style="margin-top: 80px; padding: 40px 0; border-top: 1px solid #e5e7eb; text-align: center;">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <img src="images/soulism-logo.png" alt="Soulism" style="height:44px; width:auto; margin-bottom:16px; filter:invert(1);">
-        <p style="color:#B9B2C6; max-width:340px;">A modern philosophy of awakened consciousness, honest ethics, and self-authored meaning.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Soulism</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/thesoulism_" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.facebook.com/TheSoulism" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://youtube.com/@thesoulism" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="mailto:thesoulism@gmail.com">thesoulism@gmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
-      <span>© 2026 Soulism. All rights reserved.</span>
-      <span>Founded by Shashank</span>
-    </div>
+      <p style="color:#6b7280; font-size: 0.95rem; margin:0;">© 2026 Soulism. All rights reserved. | Founded by Shashank</p>
   </div>
 </footer>
 
-<script>
-  document.getElementById('navtoggle').addEventListener('click', function(){
-    document.getElementById('navlinks').classList.toggle('open');
-  });
-</script>
 </body>
 </html>
