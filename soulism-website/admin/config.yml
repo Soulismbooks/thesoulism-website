@@ -2,7 +2,7 @@
 ## ------------------------------------------------------------
 ## Before this works, replace the THREE placeholders below:
 ##   1. YOUR_GITHUB_USERNAME/YOUR_REPO_NAME   -> your actual GitHub repo
-##   2. YOUR-WORKER-SUBDOMAIN                  -> your Cloudflare Worker URL (see oauth-worker.js instructions)
+##   2. YOUR-WORKER-SUBDOMAIN                 -> your Cloudflare Worker URL (see oauth-worker.js instructions)
 ## ------------------------------------------------------------
 backend:
   name: github
@@ -15,7 +15,8 @@ public_folder: "/images/blog"
 collections:
   - name: "posts"
     label: "Blog Posts"
-    folder: "soulism-website/posts"
+    # 🟢 बदलाव यहाँ हुआ है: posts को _posts कर दिया गया है
+    folder: "soulism-website/_posts"
     create: true
     slug: "{{slug}}"
     fields:
