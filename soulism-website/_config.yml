@@ -1,0 +1,7 @@
+url: "https://thesoulism.com"
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
