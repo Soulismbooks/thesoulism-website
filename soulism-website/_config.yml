@@ -6,3 +6,4 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      description: "Soulism Blog"
