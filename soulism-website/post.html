@@ -3,12 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="page-title">Soulism Blog</title>
-<meta id="meta-desc" name="description" content="A reflection from the Soulism blog.">
-<link rel="icon" type="image/x-icon" href="favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
-<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-<link rel="stylesheet" href="style.css">
+
+<!-- 🟢 100% AUTOMATIC SEO & META TAGS (मशीन यहाँ डेटा खुद भरेगी) -->
+<title>{{ page.title }} | Soulism Blog</title>
+<meta name="description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
+
+<!-- 🟢 WhatsApp / Facebook Link Preview (शेयर करने पर फोटो और टाइटल आएगा) -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ site.url }}{{ page.url }}">
+<meta property="og:image" content="{{ site.url }}{{ page.image }}">
+<meta property="og:site_name" content="Soulism">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | truncatewords: 30 }}">
+<meta name="twitter:image" content="{{ site.url }}{{ page.image }}">
+
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css"> 
 <style>
   .post-body{max-width:700px; margin:0 auto;}
   .post-body h2{margin-top:1.6em;}
@@ -18,21 +35,30 @@
     border-left:3px solid var(--magenta); margin:28px 0; padding:4px 0 4px 22px;
     font-family:var(--display); font-style:italic; font-size:1.2rem; color:var(--ink-soft);
   }
+  /* Share Buttons CSS */
+  .share-section { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 50px; padding-top: 25px; border-top: 2px dashed #ddd; }
+  .share-section p { margin: 0; font-weight: 600; font-size: 1.1rem; width: 100%; margin-bottom: 5px; }
+  .share-btn { padding: 10px 18px; border-radius: 6px; color: white; font-size: 15px; font-weight: 500; border: none; cursor: pointer; }
+  .share-btn:hover { opacity: 0.85; }
+  .btn-wa { background: #25D366; }
+  .btn-fb { background: #1877F2; }
+  .btn-tw { background: #1DA1F2; }
+  .btn-copy { background: #64748b; }
 </style>
 </head>
 <body>
 
 <header class="site">
   <nav class="nav">
-    <a href="index.html" class="logo">
-      <img src="images/soulism-logo.png" alt="Soulism logo" style="height:40px; width:auto;">
+    <a href="/index.html" class="logo">
+      <img src="/images/soulism-logo.png" alt="Soulism logo" style="height:40px; width:auto;">
     </a>
     <ul class="navlinks" id="navlinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Soulism</a></li>
-      <li><a href="books.html">Books</a></li>
-      <li><a href="blog.html" class="active">Blog</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="/index.html">Home</a></li>
+      <li><a href="/about.html">About Soulism</a></li>
+      <li><a href="/books.html">Books</a></li>
+      <li><a href="/blog.html" class="active">Blog</a></li>
+      <li><a href="/contact.html">Contact</a></li>
     </ul>
     <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
   </nav>
@@ -40,15 +66,30 @@
 
 <section class="hero" style="padding-bottom:20px;">
   <div class="wrap post-body">
-    <a href="blog.html" style="font-size:0.9rem; color:var(--muted); text-decoration:none;">← Back to Blog</a>
-    <div id="post-meta" style="margin-top:18px;"></div>
-    <h1 id="post-title" style="max-width:700px; margin-top:10px;">Loading…</h1>
+    <a href="/blog.html" style="font-size:0.9rem; color:#888; text-decoration:none;">← Back to Blog</a>
+    <div id="post-meta" style="margin-top:18px;">
+      <!-- 🟢 मशीन डेट और टैग यहाँ खुद भरेगी -->
+      <span class="eyebrow">{{ page.date | date: "%B %d, %Y" }} {% if page.tag %} · {{ page.tag }} {% endif %}</span>
+    </div>
+    <!-- 🟢 मशीन ब्लॉग का टाइटल यहाँ खुद भरेगी -->
+    <h1 id="post-title" style="max-width:700px; margin-top:10px;">{{ page.title }}</h1>
   </div>
 </section>
 
 <section style="padding-top:0;">
   <div class="wrap post-body" id="post-content">
-    <p style="color:var(--muted);">Loading post…</p>
+    
+    <!-- 🟢 मशीन आपका पूरा आर्टिकल (Markdown) इस जगह पर डाल देगी -->
+    {{ content }}
+    
+    <!-- Share Buttons -->
+    <div class="share-section">
+        <p>Share this reflection:</p>
+        <button onclick="shareOnWhatsApp()" class="share-btn btn-wa">WhatsApp</button>
+        <button onclick="shareOnFacebook()" class="share-btn btn-fb">Facebook</button>
+        <button onclick="shareOnTwitter()" class="share-btn btn-tw">Twitter</button>
+        <button onclick="copyLink()" class="share-btn btn-copy" id="copyBtn">Copy Link</button>
+    </div>
   </div>
 </section>
 
@@ -56,102 +97,50 @@
   <div class="wrap">
     <h2>More from Soulism</h2>
     <p style="max-width:520px; margin:0 auto 28px;">Keep exploring the philosophy, or bring your own question to the Help Center.</p>
-    <a href="blog.html" class="btn btn-primary" style="background:var(--paper); color:var(--night);">Back to All Posts →</a>
+    <a href="/blog.html" class="btn btn-primary" style="background:#fff; color:#111;">Back to All Posts →</a>
   </div>
 </section>
 
 <footer class="site">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <img src="images/soulism-logo.png" alt="Soulism" style="height:44px; width:auto; margin-bottom:16px; filter:invert(1);">
-        <p style="color:#B9B2C6; max-width:340px;">A modern philosophy of awakened consciousness, honest ethics, and self-authored meaning.</p>
-      </div>
-      <div>
-        <h4>Explore</h4>
-        <ul>
-          <li><a href="about.html">About Soulism</a></li>
-          <li><a href="books.html">Books</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="https://www.instagram.com/thesoulism_" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.facebook.com/TheSoulism" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://youtube.com/@thesoulism" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="mailto:thesoulism@gmail.com">thesoulism@gmail.com</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="foot-bottom">
+    <div class="foot-bottom" style="margin-top: 30px; border-top: 1px solid #ddd; padding-top: 20px;">
       <span>© 2026 Soulism. All rights reserved.</span>
       <span>Founded by Shashank</span>
     </div>
   </div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script>
   document.getElementById('navtoggle').addEventListener('click', function(){
     document.getElementById('navlinks').classList.toggle('open');
   });
 
-  const GITHUB_OWNER = "Soulismbooks";
-  const GITHUB_REPO  = "thesoulism-website";
-  const BRANCH = "main";
-  const POSTS_PATH = "soulism-website/posts";
-
-  function parseFrontmatter(raw) {
-    const match = raw.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
-    if (!match) return { data: {}, body: raw };
-    const yaml = match[1];
-    const body = match[2];
-    const data = {};
-    yaml.split('\n').forEach(line => {
-      const idx = line.indexOf(':');
-      if (idx === -1) return;
-      const key = line.slice(0, idx).trim();
-      let val = line.slice(idx + 1).trim();
-      val = val.replace(/^["']|["']$/g, '');
-      data[key] = val;
-    });
-    return { data, body };
+  // Share Functions
+  function shareOnWhatsApp() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent(document.title + " - Read here: ");
+      window.open('https://api.whatsapp.com/send?text=' + text + url, '_blank');
   }
-
-  async function loadPost() {
-    const params = new URLSearchParams(window.location.search);
-    const slug = params.get('post');
-    const contentEl = document.getElementById('post-content');
-    if (!slug) {
-      contentEl.innerHTML = '<p>No post specified.</p>';
-      return;
-    }
-    try {
-      const rawUrl = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${BRANCH}/${POSTS_PATH}/${slug}.md`;
-      const res = await fetch(rawUrl);
-      if (!res.ok) throw new Error('Post not found');
-      const raw = await res.text();
-      const { data, body } = parseFrontmatter(raw);
-
-      document.title = (data.title || 'Post') + ' — Soulism Blog';
-      document.getElementById('page-title').textContent = (data.title || 'Post') + ' — Soulism Blog';
-      document.getElementById('meta-desc').setAttribute('content', data.excerpt || '');
-      document.getElementById('post-title').textContent = data.title || 'Untitled';
-
-      const dateStr = data.date ? new Date(data.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : '';
-      document.getElementById('post-meta').innerHTML =
-        `<span class="eyebrow">${dateStr}${data.tag ? ' · ' + data.tag : ''}</span>`;
-
-      contentEl.innerHTML = marked.parse(body);
-    } catch (err) {
-      contentEl.innerHTML = '<p style="color:var(--muted);">This post could not be loaded. (' + err.message + ')</p>';
-    }
+  function shareOnFacebook() {
+      const url = encodeURIComponent(window.location.href);
+      window.open('https://www.facebook.com/sharer/sharer.php?u=' + url, '_blank');
   }
-
-  loadPost();
+  function shareOnTwitter() {
+      const url = encodeURIComponent(window.location.href);
+      const text = encodeURIComponent("Read this reflection: " + document.title);
+      window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+  }
+  function copyLink() {
+      navigator.clipboard.writeText(window.location.href).then(() => {
+          const btn = document.getElementById('copyBtn');
+          btn.innerText = 'Copied!';
+          btn.style.background = '#16a34a';
+          setTimeout(() => {
+              btn.innerText = 'Copy Link';
+              btn.style.background = '#64748b';
+          }, 2000);
+      });
+  }
 </script>
 </body>
 </html>
