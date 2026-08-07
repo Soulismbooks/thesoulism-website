@@ -50,6 +50,8 @@
       <li><a href="blog.html" class="active">Blog</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <!-- 🟢 यह मेनू बटन छूट गया था -->
+    <button class="navtoggle" id="navtoggle" aria-label="Menu">☰</button>
   </nav>
 </header>
 
@@ -64,7 +66,7 @@
 <section style="padding-top:30px;">
   <div class="wrap" style="max-width:760px;">
     
-    <!-- 🟢 AUTOMATIC POST LISTING (मशीन यहाँ से सारे ब्लॉग्स दिखाएगी) -->
+    <!-- 🟢 AUTOMATIC POST LISTING -->
     <div id="posts-list">
       {% for post in site.posts %}
       <a href="{{ post.url }}" class="post-card">
