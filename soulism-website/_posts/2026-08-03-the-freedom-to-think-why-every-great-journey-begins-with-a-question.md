@@ -3,7 +3,7 @@ title: 'The Freedom to Think: Why Every Great Journey Begins with a Question'
 date: 2026-08-03T21:31
 tag: Meaning
 excerpt: Every meaningful transformation begins with a question. Soulism encourages you to think independently, question fearlessly, and discover truth through your own awareness rather than inherited beliefs.
-image: /images/blog/1.png
+image: /images/blog/the-freedom-to-think.webp
 ---
 
 <style>
