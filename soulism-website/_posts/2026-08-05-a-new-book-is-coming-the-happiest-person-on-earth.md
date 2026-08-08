@@ -1,5 +1,5 @@
 ---
-title: 'AA A New Book Is Coming: The Happiest Person on Earth'
+title: 'New Book Is Coming: The Happiest Person on Earth'
 date: 2026-08-05T21:22
 tag: Belief
 excerpt: Can happiness be created from within rather than chased in the outside world? The Happiest Person on Earth introduces the Soulism philosophy—a modern guide to awareness, meaning, and a truly beautiful life.
