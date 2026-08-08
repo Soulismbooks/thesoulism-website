@@ -18,7 +18,7 @@ collections:
     # 🟢 बदलाव यहाँ हुआ है: posts को _posts कर दिया गया है
     folder: "soulism-website/_posts"
     create: true
-    slug: "{{slug}}"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
@@ -48,3 +48,4 @@ collections:
         editor_components:
           - image
           - code-block
+          
