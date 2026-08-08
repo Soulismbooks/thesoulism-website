@@ -336,6 +336,7 @@ font-size:16px!important;
 <div class="soulism-page">
 
 <section class="soulism-hero">
+<img src="/images/blog/1000802210.png" alt="Soulism — A Modern Philosophy of Conscious Living" style="max-width:100%;height:auto;border-radius:12px;margin-bottom:24px;">
 <h1>Soulism</h1>
 <h2>A Modern Philosophy of Conscious Living</h2>
 <p>Awareness. Freedom. Meaning. A Beautiful Life.</p>
