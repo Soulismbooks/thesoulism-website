@@ -138,7 +138,7 @@ hr{
 
 <p><strong>5 min read</strong></p>
 
-<img src="/images/blog/1.webp"
+<img src="/images/blog/1.png"
 
 alt="A person sitting on a mountain overlooking the sunrise, symbolizing freedom of thought, awareness, and self-discovery in Soulism.">
 
