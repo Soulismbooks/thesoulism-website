@@ -141,6 +141,28 @@
 
   .category-mark { width: 40px; height: 3px; background: #16a34a; border-radius: 2px; margin-bottom: 14px; }
 
+  /* Dual-CTA card (Kindle + India hard copy) */
+  .book-card-dual { cursor: default; }
+  .book-card-dual .book-cover-wrap img.book-cover-img { transition: none; }
+  .book-dual-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 16px; }
+  .btn-mini {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1.5px solid transparent;
+    transition: transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-mini:hover, .btn-mini:focus-visible { transform: translateY(-2px); }
+  .btn-mini-kindle { background: #16a34a; color: #fff; }
+  .btn-mini-kindle:hover { box-shadow: 0 10px 20px rgba(22,163,74,.25); }
+  .btn-mini-hardcopy { background: #fff8ee; color: #b45309; border-color: #f3c78a; }
+  .btn-mini-hardcopy:hover { box-shadow: 0 10px 20px rgba(180,83,9,.15); }
+
   @media (max-width: 640px) {
     .book-featured { grid-template-columns: 1fr; text-align: left; }
     .book-featured .book-cover-wrap { max-width: 220px; }
@@ -246,7 +268,7 @@
       </div>
     </a>
 
-    <a href="https://amzn.to/4vHEDVY" target="_blank" rel="noopener" class="book-card">
+    <div class="book-card book-card-dual">
       <div class="book-cover-wrap">
         <img src="images/apna-ishwar-swayam-gadho.jpg" alt="Apna Ishwar Swayam Gadho Hindi book cover" class="book-cover-img" loading="lazy">
       </div>
@@ -254,9 +276,12 @@
         <span class="book-tag book-tag-hi">Hindi</span>
         <h3>अपना ईश्वर स्वयं गढ़ो (Create Your Own God — Hindi)</h3>
         <p>वही foundational Soulism किताब, अब पूरी तरह हिंदी में — भारतीय संदर्भ और सरल भाषा के साथ। सवाल पूछो, अर्थ गढ़ो, स्वतंत्र जियो। उन पाठकों के लिए जो अपनी भाषा में गहराई से सोचना चाहते हैं।</p>
-        <span class="book-cta">Read on Amazon</span>
+        <div class="book-dual-cta">
+          <a href="https://amzn.to/4vHEDVY" target="_blank" rel="noopener" class="btn-mini btn-mini-kindle">Kindle पर पढ़ें</a>
+          <a href="https://go.thesoulism.com/Book1" target="_blank" rel="noopener" class="btn-mini btn-mini-hardcopy">हार्ड कॉपी मंगवाएं (भारत)</a>
+        </div>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
