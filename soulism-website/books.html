@@ -10,14 +10,14 @@
 
 <!-- Search Engine Crawling & Indexing -->
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="canonical" href="https://thesoulism.com/books.html">
+<link rel="canonical" href="https://www.thesoulism.com/books.html">
 
 <!-- USA Audience & Open Graph / Social Preview Tags -->
 <meta property="og:title" content="Books by Shashank — Soulism | Philosophy on Kindle">
 <meta property="og:description" content="Explore the full Soulism book catalog by Shashank. Discover modern philosophy, money, success, and personal freedom books, available on Kindle.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
-<meta property="og:url" content="https://thesoulism.com/books.html">
+<meta property="og:url" content="https://www.thesoulism.com/books.html">
 <meta property="og:image" content="https://thesoulism.com/images/soulism-logo.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -51,6 +51,102 @@
   }
 }
 </script>
+
+<!-- Page-specific styles for the book library -->
+<style>
+  .book-featured {
+    display: grid;
+    grid-template-columns: minmax(220px, 320px) 1fr;
+    gap: 40px;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 56px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--line);
+  }
+  .book-featured .book-cover-wrap img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 24px 48px rgba(23,21,28,.22);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .book-featured:hover .book-cover-wrap img,
+  .book-featured:focus-visible .book-cover-wrap img {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 56px rgba(23,21,28,.28);
+  }
+  .book-featured-label {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #16a34a;
+    margin-bottom: 10px;
+  }
+  .book-featured h3 { font-size: 1.9rem; margin: 0 0 14px; line-height: 1.2; }
+  .book-featured p { font-size: 1.05rem; line-height: 1.7; }
+
+  .book-card {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 26px;
+    align-items: start;
+    text-decoration: none;
+    color: inherit;
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+  }
+  .book-card:first-of-type { border-top: none; }
+  .book-cover-wrap { position: relative; }
+  .book-cover-wrap img.book-cover-img {
+    width: 100%;
+    display: block;
+    border-radius: 2px;
+    box-shadow: 0 14px 28px rgba(23,21,28,.16);
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+  .book-card:hover .book-cover-wrap img.book-cover-img,
+  .book-card:focus-visible .book-cover-wrap img.book-cover-img {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 34px rgba(23,21,28,.22);
+  }
+  .book-card h3 { margin: 0 0 10px; font-size: 1.3rem; line-height: 1.3; }
+  .book-card p { margin: 0; font-size: 0.98rem; line-height: 1.65; color: var(--ink); }
+  .book-card .book-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 14px;
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #16a34a;
+  }
+  .book-card .book-cta::after { content: "→"; transition: transform .2s ease; }
+  .book-card:hover .book-cta::after,
+  .book-card:focus-visible .book-cta::after { transform: translateX(3px); }
+
+  .book-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 2px;
+    margin-bottom: 10px;
+    border: 1px solid var(--line);
+  }
+  .book-tag-en { color: #374151; border-color: #d1d5db; }
+  .book-tag-hi { color: #b45309; border-color: #fcd9a8; background: #fff8ee; }
+  .book-tag-es { color: #7c3aed; border-color: #e0d4fb; background: #f8f5ff; }
+
+  .category-mark { width: 40px; height: 3px; background: #16a34a; border-radius: 2px; margin-bottom: 14px; }
+
+  @media (max-width: 640px) {
+    .book-featured { grid-template-columns: 1fr; text-align: left; }
+    .book-featured .book-cover-wrap { max-width: 220px; }
+    .book-card { grid-template-columns: 96px 1fr; gap: 16px; }
+  }
+</style>
 </head>
 <body>
 
@@ -83,71 +179,84 @@
 <section>
   <div class="wrap">
     <div class="section-head">
+      <div class="category-mark"></div>
       <span class="eyebrow">Category</span>
       <h2>Soulism Philosophy</h2>
       <p class="lede">The foundational ideas — consciousness, belief, and what it means to build your own.</p>
     </div>
 
-    <div class="book-card">
-      <img src="images/create-your-own-god.jpg" alt="Create Your Own God book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/4ysRPRr" target="_blank" rel="noopener" class="book-featured">
+      <div class="book-cover-wrap">
+        <img src="images/create-your-own-god.jpg" alt="Create Your Own God book cover" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-featured-label">Start here — the foundational Soulism text</span>
         <h3>Create Your Own God</h3>
-        <p>Every belief you've ever held was, at some point, created by someone. Question everything you inherited about God, truth, and meaning — and build a belief system that's finally, actually yours. The foundational Soulism text, and the place to start.</p>
-        <a href="https://amzn.to/4ysRPRr" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <p>Every belief you've ever held was, at some point, created by someone. Question everything you inherited about God, truth, and meaning — and build a belief system that's finally, actually yours. If you only read one Soulism book, this is the one that everything else stands on.</p>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/soulism-awakening.jpg" alt="Soulism: The Awakening of Inner Consciousness book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/4wVcn3f" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/soulism-awakening.jpg" alt="Soulism: The Awakening of Inner Consciousness book cover" class="book-cover-img" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
         <h3>Soulism: The Awakening of Inner Consciousness</h3>
-        <p>What does it actually feel like to be fully awake inside your own life? A modern philosophy for self-realization, clarity, and living consciously in the present moment — not someday, now.</p>
-        <a href="https://amzn.to/4wVcn3f" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <p>What does it actually feel like to be fully awake inside your own life? A modern philosophy for self-realization, clarity, and living consciously in the present moment — not someday, now. For anyone who senses they've been sleepwalking through their own choices.</p>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/does-god-exist.jpg" alt="Does God Exist book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/4w0Gyp3" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/does-god-exist.jpg" alt="Does God Exist book cover" class="book-cover-img" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
         <h3>Does God Exist?</h3>
-        <p>The question everyone argues about — and the reason it might be the wrong question to spend your life on. A sharp, honest look at why this question is not the most important one, and what to ask instead.</p>
-        <a href="https://amzn.to/4w0Gyp3" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <p>The question everyone argues about — and the reason it might be the wrong question to spend your life on. A sharp, honest look at why this question is not the most important one, and what to ask instead. Good for anyone tired of the same unresolved debate.</p>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/soulism-evolution.jpg" alt="Soulism and Evolution book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/4w9SHsl" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/soulism-evolution.jpg" alt="Soulism and Evolution book cover" class="book-cover-img" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
         <h3>Soulism and Evolution</h3>
-        <p>Consciousness itself is still evolving — and so is the way humanity understands it. A look at the future of human consciousness, and where this philosophy points next.</p>
-        <a href="https://amzn.to/4w9SHsl" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <p>Consciousness itself is still evolving — and so is the way humanity understands it. A look at the future of human consciousness, and where this philosophy points next. Best read after the foundational book, once the core ideas already feel familiar.</p>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/why-atheist-en.jpg" alt="Why I Am an Atheist and Still Spiritual book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/3Rv8lPU" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/why-atheist-en.jpg" alt="Why I Am an Atheist and Still Spiritual book cover" class="book-cover-img" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
         <h3>Why I Am an Atheist — And Still Spiritual</h3>
-        <p>Disbelief and a rich inner life are not opposites — most people have just never been shown how they coexist. The Soulism path beyond religion and belief.</p>
-        <a href="https://amzn.to/3Rv8lPU" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
-        <p style="margin-top:14px;"><span class="tag-pill">Also in Hindi</span></p>
+        <p>Disbelief and a rich inner life are not opposites — most people have just never been shown how they coexist. The Soulism path beyond religion and belief, for anyone who has quietly wondered if they have to choose one or the other.</p>
+        <span class="book-tag book-tag-hi" style="margin-top:10px; margin-bottom:0;">Also in Hindi</span><br>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/apna-ishwar-swayam-gadho.jpg" alt="Apna Ishwar Swayam Gadho Hindi book cover" class="book-cover-img" loading="lazy">
-      <div>
-        <span class="book-tag">Hindi</span>
-        <h3>अपना ईश्वर स्वयं गढ़ो (Create Your Own God — Hindi)</h3>
-        <p>वही foundational Soulism किताब, अब पूरी तरह हिंदी में — भारतीय संदर्भ और सरल भाषा के साथ। सवाल पूछो, अर्थ गढ़ो, स्वतंत्र जियो।</p>
-        <a href="https://amzn.to/4vHEDVY" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+    <a href="https://amzn.to/4vHEDVY" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/apna-ishwar-swayam-gadho.jpg" alt="Apna Ishwar Swayam Gadho Hindi book cover" class="book-cover-img" loading="lazy">
       </div>
-    </div>
+      <div>
+        <span class="book-tag book-tag-hi">Hindi</span>
+        <h3>अपना ईश्वर स्वयं गढ़ो (Create Your Own God — Hindi)</h3>
+        <p>वही foundational Soulism किताब, अब पूरी तरह हिंदी में — भारतीय संदर्भ और सरल भाषा के साथ। सवाल पूछो, अर्थ गढ़ो, स्वतंत्र जियो। उन पाठकों के लिए जो अपनी भाषा में गहराई से सोचना चाहते हैं।</p>
+        <span class="book-cta">Read on Amazon</span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -155,40 +264,47 @@
 <section class="section-dim">
   <div class="wrap">
     <div class="section-head">
+      <div class="category-mark"></div>
       <span class="eyebrow">Category</span>
       <h2>Money &amp; Success</h2>
       <p class="lede">What ambition and prosperity look like when they're built on awareness instead of anxiety.</p>
     </div>
 
-    <div class="book-card">
-      <img src="images/soul-of-wealth.jpg" alt="The Soul of Wealth book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/4bU5aZ3" target="_blank" rel="noopener" class="book-card" style="border-color:rgba(0,0,0,.08);">
+      <div class="book-cover-wrap">
+        <img src="images/soul-of-wealth.jpg" alt="The Soul of Wealth book cover" class="book-cover-img" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
         <h3>The Soul of Wealth</h3>
-        <p>Most people chase money by abandoning themselves along the way. The Soulism way to money, freedom, and inner prosperity — wealth that doesn't cost you your own awareness to get.</p>
-        <a href="https://amzn.to/4bU5aZ3" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <p>Most people chase money by abandoning themselves along the way. The Soulism way to money, freedom, and inner prosperity — wealth that doesn't cost you your own awareness to get. For anyone who wants to build a life, not just a bank balance.</p>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/success-without-struggle.jpg" alt="Success Without Struggle book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/4b5ixpb" target="_blank" rel="noopener" class="book-card" style="border-color:rgba(0,0,0,.08);">
+      <div class="book-cover-wrap">
+        <img src="images/success-without-struggle.jpg" alt="Success Without Struggle book cover" class="book-cover-img" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
         <h3>Success Without Struggle</h3>
-        <p>What if growth and peace were never actually opposites? How awareness creates both at the same time — success that doesn't require burning out to reach.</p>
-        <a href="https://amzn.to/4b5ixpb" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <p>What if growth and peace were never actually opposites? How awareness creates both at the same time — success that doesn't require burning out to reach. For anyone who's achieved things and still felt strangely empty at the finish line.</p>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/make-2026.jpg" alt="Make 2026 Your Year of Success book cover" class="book-cover-img" loading="lazy">
-      <div>
-        <span class="book-tag">English</span>
-        <h3>Make 2026 Your Year of Success</h3>
-        <p>Not another list of resolutions you'll abandon by February. The Soulism way to clarity, growth, and inner stability — a practical, honest companion for the year ahead.</p>
-        <a href="https://amzn.to/4wpteeH" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+    <a href="https://amzn.to/4wpteeH" target="_blank" rel="noopener" class="book-card" style="border-color:rgba(0,0,0,.08);">
+      <div class="book-cover-wrap">
+        <img src="images/make-2026.jpg" alt="Make 2026 Your Year of Success book cover" class="book-cover-img" loading="lazy">
       </div>
-    </div>
+      <div>
+        <span class="book-tag book-tag-en">English</span>
+        <h3>Make 2026 Your Year of Success</h3>
+        <p>Not another list of resolutions you'll abandon by February. The Soulism way to clarity, growth, and inner stability — a practical, honest companion for the year ahead, for anyone who wants this year to actually feel different.</p>
+        <span class="book-cta">Read on Amazon</span>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -196,40 +312,47 @@
 <section>
   <div class="wrap">
     <div class="section-head">
+      <div class="category-mark"></div>
       <span class="eyebrow">Category</span>
       <h2>Personal Freedom</h2>
       <p class="lede">Fear, obligation, and the quiet ways we shrink our own lives — examined honestly.</p>
     </div>
 
-    <div class="book-card">
-      <img src="images/fear.jpg" alt="Fear book cover" class="book-cover-img" loading="lazy">
-      <div>
-        <span class="book-tag">English</span>
-        <h3>Fear</h3>
-        <p>Fear can teach a child not to touch fire. It should never be trusted to run an adult's entire life. A close, unflinching look at what fear actually does to us — and what's left once it's finally examined instead of obeyed.</p>
-        <a href="https://amzn.to/4foKzx4" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+    <a href="https://amzn.to/4foKzx4" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/fear.jpg" alt="Fear book cover" class="book-cover-img" loading="lazy">
       </div>
-    </div>
-
-    <div class="book-card">
-      <img src="images/women-religion-freedom.jpg" alt="Women, Religion and Freedom book cover" class="book-cover-img" loading="lazy">
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
+        <h3>Fear</h3>
+        <p>Fear can teach a child not to touch fire. It should never be trusted to run an adult's entire life. A close, unflinching look at what fear actually does to us — and what's left once it's finally examined instead of obeyed. For anyone who suspects fear has been making their decisions for years.</p>
+        <span class="book-cta">Read on Amazon</span>
+      </div>
+    </a>
+
+    <a href="https://amzn.to/4ffulre" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/women-religion-freedom.jpg" alt="Women, Religion and Freedom book cover" class="book-cover-img" loading="lazy">
+      </div>
+      <div>
+        <span class="book-tag book-tag-en">English</span>
         <h3>Women, Religion &amp; Freedom</h3>
         <p>How much of what feels like "just how things are" was actually built, deliberately, to be obeyed? Beyond obedience, fear, and moral conditioning — an honest look at what's inherited and what's genuinely chosen.</p>
-        <a href="https://amzn.to/4ffulre" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
 
-    <div class="book-card">
-      <img src="images/one-life-many-passions.jpg" alt="One Life Many Passions book cover" class="book-cover-img" loading="lazy">
+    <a href="https://amzn.to/4pxMhAZ" target="_blank" rel="noopener" class="book-card">
+      <div class="book-cover-wrap">
+        <img src="images/one-life-many-passions.jpg" alt="One Life Many Passions book cover" class="book-cover-img" loading="lazy">
+      </div>
       <div>
-        <span class="book-tag">English</span>
+        <span class="book-tag book-tag-en">English</span>
         <h3>One Life, Many Passions</h3>
         <p>You get one life and an impossible number of things that could interest you in it. What are you waiting for? A case for living more of your life on purpose, not just the parts that feel safe.</p>
-        <a href="https://amzn.to/4pxMhAZ" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+        <span class="book-cta">Read on Amazon</span>
       </div>
-    </div>
+    </a>
   </div>
 </section>
 
@@ -237,29 +360,34 @@
 <section class="section-dim">
   <div class="wrap">
     <div class="section-head">
+      <div class="category-mark"></div>
       <span class="eyebrow">Also Available</span>
       <h2>In Hindi &amp; Spanish</h2>
       <p class="lede">Soulism was never meant to stay in one language.</p>
     </div>
     <div class="grid-2">
-      <div class="book-card" style="border-top:none; padding-top:0;">
-        <img src="images/why-atheist-hi.jpg" alt="Why I Am an Atheist Hindi edition book cover" class="book-cover-img" loading="lazy">
+      <a href="https://amzn.to/45007CR" target="_blank" rel="noopener" class="book-card" style="border-top:none; padding-top:0;">
+        <div class="book-cover-wrap">
+          <img src="images/why-atheist-hi.jpg" alt="Why I Am an Atheist Hindi edition book cover" class="book-cover-img" loading="lazy">
+        </div>
         <div>
-          <span class="book-tag">Hindi</span>
+          <span class="book-tag book-tag-hi">Hindi</span>
           <h3>Why I Am an Atheist — And Still Spiritual (Hindi)</h3>
           <p>The Soulism path beyond religion and belief, in Hindi.</p>
-          <a href="https://amzn.to/45007CR" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+          <span class="book-cta">Read on Amazon</span>
         </div>
-      </div>
-      <div class="book-card" style="border-top:none; padding-top:0;">
-        <img src="images/por-que-soy-ateo-es.jpg" alt="Por que soy ateo Spanish edition book cover" class="book-cover-img" loading="lazy">
+      </a>
+      <a href="https://amzn.to/4gUhzjj" target="_blank" rel="noopener" class="book-card" style="border-top:none; padding-top:0;">
+        <div class="book-cover-wrap">
+          <img src="images/por-que-soy-ateo-es.jpg" alt="Por que soy ateo Spanish edition book cover" class="book-cover-img" loading="lazy">
+        </div>
         <div>
-          <span class="book-tag">Spanish</span>
+          <span class="book-tag book-tag-es">Spanish</span>
           <h3>Por Qué Soy Ateo — Y, Aun Así, Espiritual</h3>
           <p>El camino de Soulism más allá de la religión y las creencias.</p>
-          <a href="https://amzn.to/4gUhzjj" target="_blank" rel="noopener" class="btn btn-outline">Read on Amazon →</a>
+          <span class="book-cta">Read on Amazon</span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
