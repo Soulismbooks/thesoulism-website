@@ -35,6 +35,44 @@
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <link rel="stylesheet" href="style.css">
 
+<!-- Page-specific styles for homepage visual refinements -->
+<style>
+  /* Book cover hover lift — matches books.html */
+  .grid-3 img[alt$="book cover"] { transition: transform .2s ease, box-shadow .2s ease; }
+  .grid-3 a:hover img[alt$="book cover"],
+  .grid-3 a:focus-visible img[alt$="book cover"] {
+    transform: translateY(-6px);
+    box-shadow: 0 26px 48px rgba(23,21,28,.24) !important;
+  }
+
+  /* Simple line icons for the "Not a religion. A method." cards */
+  .card .icon-wrap {
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+    background: rgba(22,163,74,.08);
+    margin-bottom: 14px;
+  }
+  .card .icon-wrap svg { width: 22px; height: 22px; stroke: #16a34a; }
+
+  /* Quote strip — large decorative quotation mark */
+  .quote-strip { position: relative; overflow: hidden; }
+  .quote-strip::before {
+    content: "\201C";
+    position: absolute;
+    top: -0.35em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: Georgia, serif;
+    font-size: 12rem;
+    line-height: 1;
+    color: rgba(0,0,0,.05);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .quote-strip .wrap { position: relative; z-index: 1; }
+</style>
+
 <!-- Schema Markup (Structured Data for Google) -->
 <script type="application/ld+json">
 {
@@ -107,16 +145,25 @@
     </div>
     <div class="grid-3">
       <div class="card">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
         <span class="num">01</span>
         <h3>Consciousness First</h3>
         <p>Your own honest awareness — not any inherited authority — is where truth-seeking begins.</p>
       </div>
       <div class="card">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg>
+        </div>
         <span class="num">02</span>
         <h3>Ethics Without Fear</h3>
         <p>Morality built on empathy and reason, not on the threat of punishment.</p>
       </div>
       <div class="card">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l1.6 5.3L19 9l-5.4 1.7L12 16l-1.6-5.3L5 9l5.4-1.7z"/><path d="M19 15l.8 2.6L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.4z"/></svg>
+        </div>
         <span class="num">03</span>
         <h3>Meaning You Build</h3>
         <p>Truth isn't only found — it can be examined, questioned, and honestly created.</p>
