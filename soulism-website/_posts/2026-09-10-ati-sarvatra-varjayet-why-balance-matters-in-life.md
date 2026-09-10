@@ -10,123 +10,100 @@ image: /images/blog/1000838045.png
 
 /\* =========================================================
 
-   SOULISM BLOG — ATI SARVATRA VARJAYET
+   SOULISM BLOG — FIXED VERSION
+
+   Strong CSS to prevent website theme conflicts
 
    ========================================================= \*/
 
-.soulism-blog {
+#soulism-ati-blog {
 
-  --bg: #f8f5ee;
+  width: 100% !important;
 
-  --paper: #fffdf8;
+  max-width: 100% !important;
 
-  --text: #302a25;
+  margin: 0 auto !important;
 
-  --muted: #6e655d;
+  padding: 0 !important;
 
-  --brown: #6f4b2d;
+  background: #f8f5ee !important;
 
-  --brown-dark: #3f2c1e;
+  color: #302a25 !important;
 
-  --gold: #a47a48;
+  font-family: Arial, Helvetica, sans-serif !important;
 
-  --line: #e2dbcf;
+  line-height: 1.8 !important;
 
-  font-family: Arial, Helvetica, sans-serif;
-
-  background: var(--bg);
-
-  color: var(--text);
-
-  line-height: 1.8;
-
-  width: 100%;
-
-  overflow: hidden;
+  overflow: hidden !important;
 
 }
 
-.soulism-blog \* {
+#soulism-ati-blog \*,
 
-  box-sizing: border-box;
+#soulism-ati-blog \*::before,
+
+#soulism-ati-blog \*::after {
+
+  box-sizing: border-box !important;
 
 }
+
 
 /\* =========================================================
 
-   BLOG HERO
+   HERO
 
    ========================================================= \*/
 
-.soulism-hero {
+#soulism-ati-blog .sa-hero {
 
-  position: relative;
+  width: 100% !important;
 
-  padding: 90px 25px 85px;
+  padding: 80px 20px 75px !important;
 
-  text-align: center;
+  text-align: center !important;
 
-  background:
+  background: #f8f5ee !important;
 
-    radial-gradient(
-
-      circle at 50% 20%,
-
-      rgba(255,255,255,.95),
-
-      rgba(248,245,238,.98) 65%
-
-    );
-
-  border-bottom: 1px solid var(--line);
+  border-bottom: 1px solid #e3ddd3 !important;
 
 }
 
-.soulism-hero-inner {
+#soulism-ati-blog .sa-hero-inner {
 
-  max-width: 950px;
+  max-width: 900px !important;
 
-  margin: auto;
-
-}
-
-.soulism-eyebrow {
-
-  font-size: 12px;
-
-  letter-spacing: 4px;
-
-  text-transform: uppercase;
-
-  color: var(--gold);
-
-  margin-bottom: 25px;
-
-  font-weight: 600;
+  margin: 0 auto !important;
 
 }
 
-.soulism-hero h1 {
+#soulism-ati-blog .sa-eyebrow {
 
-  margin: 0;
+  margin: 0 0 25px !important;
 
-  font-family: Georgia, "Times New Roman", serif;
+  padding: 0 !important;
 
-  font-size: clamp(48px, 8vw, 88px);
+  color: #9a7045 !important;
 
-  line-height: 1.02;
+  font-size: 12px !important;
 
-  font-weight: 500;
+  line-height: 1.5 !important;
 
-  letter-spacing: -2px;
+  letter-spacing: 4px !important;
 
-  color: var(--brown-dark);
+  text-transform: uppercase !important;
+
+  font-weight: 600 !important;
 
 }
 
-.soulism-sanskrit {
+#soulism-ati-blog .sa-sanskrit {
 
-  margin-bottom: 20px;
+  margin: 0 0 18px !important;
+
+  padding: 0 !important;
+
+  color: #553a25 !important;
 
   font-family: "Noto Serif Devanagari",
 
@@ -134,139 +111,172 @@ image: /images/blog/1000838045.png
 
                Mangal,
 
-               serif;
+               serif !important;
 
-  font-size: clamp(25px, 4vw, 42px);
+  font-size: clamp(26px, 5vw, 44px) !important;
 
-  color: var(--brown);
+  line-height: 1.5 !important;
 
-}
-
-.soulism-hero-line {
-
-  width: 90px;
-
-  height: 1px;
-
-  background: var(--gold);
-
-  margin: 30px auto;
+  font-weight: 600 !important;
 
 }
 
-.soulism-hero-subtitle {
+#soulism-ati-blog .sa-hero h1 {
 
-  max-width: 700px;
+  margin: 0 !important;
 
-  margin: auto;
+  padding: 0 !important;
 
-  color: var(--muted);
+  color: #3d2b1e !important;
 
-  font-size: 18px;
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-size: clamp(44px, 8vw, 82px) !important;
+
+  line-height: 1.05 !important;
+
+  letter-spacing: -2px !important;
+
+  font-weight: 500 !important;
 
 }
+
+#soulism-ati-blog .sa-line {
+
+  width: 85px !important;
+
+  height: 2px !important;
+
+  margin: 28px auto !important;
+
+  padding: 0 !important;
+
+  background: #a47a48 !important;
+
+}
+
+#soulism-ati-blog .sa-hero-description {
+
+  max-width: 680px !important;
+
+  margin: 0 auto !important;
+
+  padding: 0 !important;
+
+  color: #665d55 !important;
+
+  font-size: 18px !important;
+
+  line-height: 1.8 !important;
+
+}
+
 
 /\* =========================================================
 
-   MAIN CONTENT
+   CONTENT
 
    ========================================================= \*/
 
-.soulism-content {
+#soulism-ati-blog .sa-content {
 
-  max-width: 880px;
+  width: 100% !important;
 
-  margin: auto;
+  max-width: 880px !important;
 
-  padding: 75px 25px;
+  margin: 0 auto !important;
 
-}
-
-.soulism-intro {
-
-  text-align: center;
-
-  margin-bottom: 65px;
+  padding: 70px 25px !important;
 
 }
 
-.soulism-intro h2 {
+#soulism-ati-blog .sa-intro {
 
-  margin: 0 0 18px;
+  margin: 0 0 65px !important;
 
-  font-family: Georgia, "Times New Roman", serif;
+  padding: 0 !important;
 
-  font-size: clamp(36px, 6vw, 52px);
-
-  line-height: 1.15;
-
-  font-weight: 500;
-
-  color: var(--brown-dark);
+  text-align: center !important;
 
 }
 
-.soulism-intro p {
+#soulism-ati-blog .sa-intro h2 {
 
-  max-width: 720px;
+  margin: 0 0 18px !important;
 
-  margin: auto;
+  padding: 0 !important;
 
-  color: var(--muted);
+  color: #3d2b1e !important;
 
-  font-size: 18px;
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-size: clamp(36px, 6vw, 52px) !important;
+
+  line-height: 1.15 !important;
+
+  font-weight: 500 !important;
 
 }
+
+#soulism-ati-blog .sa-intro p {
+
+  max-width: 720px !important;
+
+  margin: 0 auto !important;
+
+  padding: 0 !important;
+
+  color: #665d55 !important;
+
+  font-size: 18px !important;
+
+}
+
 
 /\* =========================================================
 
-   ARTICLE
+   ARTICLE TEXT
 
    ========================================================= \*/
 
-.soulism-article h2 {
+#soulism-ati-blog .sa-article h2 {
 
-  margin: 55px 0 18px;
+  margin: 55px 0 20px !important;
 
-  font-family: Georgia, "Times New Roman", serif;
+  padding: 0 !important;
 
-  font-size: 38px;
+  color: #3d2b1e !important;
 
-  line-height: 1.2;
+  font-family: Georgia, "Times New Roman", serif !important;
 
-  font-weight: 500;
+  font-size: 38px !important;
 
-  color: var(--brown-dark);
+  line-height: 1.25 !important;
 
-}
-
-.soulism-article h3 {
-
-  margin: 38px 0 14px;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 28px;
-
-  color: var(--brown);
+  font-weight: 500 !important;
 
 }
 
-.soulism-article p {
+#soulism-ati-blog .sa-article p {
 
-  margin: 0 0 23px;
+  margin: 0 0 23px !important;
 
-  font-size: 17px;
+  padding: 0 !important;
 
-  color: var(--text);
+  color: #302a25 !important;
+
+  font-size: 17px !important;
+
+  line-height: 1.85 !important;
+
+}
+
+#soulism-ati-blog .sa-article strong {
+
+  color: #3d2b1e !important;
 
 }
 
-.soulism-article strong {
-
-  color: var(--brown-dark);
-
-}
 
 /\* =========================================================
 
@@ -274,23 +284,31 @@ image: /images/blog/1000838045.png
 
    ========================================================= \*/
 
-.soulism-quote {
+#soulism-ati-blog .sa-quote {
 
-  margin: 45px 0;
+  width: 100% !important;
 
-  padding: 38px 25px;
+  margin: 45px 0 !important;
 
-  text-align: center;
+  padding: 38px 25px !important;
 
-  background: #eee7da;
+  background: #eee6d8 !important;
 
-  border-left: 4px solid var(--gold);
+  border-left: 4px solid #a47a48 !important;
 
-  border-right: 4px solid var(--gold);
+  border-right: 4px solid #a47a48 !important;
+
+  text-align: center !important;
 
 }
 
-.soulism-quote-sanskrit {
+#soulism-ati-blog .sa-quote-sanskrit {
+
+  margin: 0 0 10px !important;
+
+  padding: 0 !important;
+
+  color: #4a3220 !important;
 
   font-family: "Noto Serif Devanagari",
 
@@ -298,27 +316,30 @@ image: /images/blog/1000838045.png
 
                Mangal,
 
-               serif;
+               serif !important;
 
-  font-size: 31px;
+  font-size: 30px !important;
 
-  color: var(--brown-dark);
-
-  margin-bottom: 10px;
+  line-height: 1.6 !important;
 
 }
 
-.soulism-quote-english {
+#soulism-ati-blog .sa-quote-english {
 
-  font-family: Georgia, "Times New Roman", serif;
+  margin: 0 !important;
 
-  font-size: 24px;
+  padding: 0 !important;
 
-  font-style: italic;
+  color: #635246 !important;
 
-  color: #655344;
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-size: 24px !important;
+
+  font-style: italic !important;
 
 }
+
 
 /\* =========================================================
 
@@ -326,337 +347,429 @@ image: /images/blog/1000838045.png
 
    ========================================================= \*/
 
-.soulism-balance-grid {
+#soulism-ati-blog .sa-card-grid {
 
-  display: grid;
+  display: grid !important;
 
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
-  gap: 18px;
+  gap: 18px !important;
 
-  margin: 35px 0 50px;
+  margin: 35px 0 50px !important;
 
-}
-
-.soulism-card {
-
-  background: var(--paper);
-
-  border: 1px solid var(--line);
-
-  border-radius: 12px;
-
-  padding: 25px;
-
-  transition: .3s ease;
+  padding: 0 !important;
 
 }
 
-.soulism-card:hover {
+#soulism-ati-blog .sa-card {
 
-  transform: translateY(-4px);
+  margin: 0 !important;
 
-  box-shadow: 0 12px 30px rgba(60,40,20,.08);
+  padding: 25px !important;
 
-}
+  background: #fffdf9 !important;
 
-.soulism-card strong {
+  border: 1px solid #e1d9cc !important;
 
-  display: block;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 25px;
-
-  color: var(--brown);
-
-  margin-bottom: 7px;
+  border-radius: 12px !important;
 
 }
 
-.soulism-card span {
+#soulism-ati-blog .sa-card strong {
 
-  color: var(--muted);
+  display: block !important;
 
-  font-size: 14px;
+  margin: 0 0 8px !important;
+
+  color: #6b492b !important;
+
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-size: 25px !important;
 
 }
+
+#soulism-ati-blog .sa-card span {
+
+  display: block !important;
+
+  color: #6b625a !important;
+
+  font-size: 14px !important;
+
+  line-height: 1.7 !important;
+
+}
+
 
 /\* =========================================================
 
-   QUESTION / HIGHLIGHT
+   HIGHLIGHT
 
    ========================================================= \*/
 
-.soulism-highlight {
+#soulism-ati-blog .sa-highlight {
 
-  margin: 45px 0;
+  margin: 45px 0 !important;
 
-  padding: 35px 25px;
+  padding: 35px 25px !important;
 
-  text-align: center;
+  background: #eee6d8 !important;
 
-  background: #eee7da;
+  border-radius: 12px !important;
 
-  border-radius: 12px;
+  text-align: center !important;
+
+}
+
+#soulism-ati-blog .sa-highlight p {
+
+  margin: 0 !important;
+
+  padding: 0 !important;
+
+  color: #4b3422 !important;
+
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-size: 29px !important;
+
+  line-height: 1.4 !important;
 
 }
 
-.soulism-highlight p {
-
-  margin: 0;
-
-  font-family: Georgia, "Times New Roman", serif;
-
-  font-size: 29px;
-
-  line-height: 1.35;
-
-  color: var(--brown-dark);
-
-}
 
 /\* =========================================================
 
-   FIVE MINUTE PRACTICE
-
-   IMPORTANT: DARK BACKGROUND + WHITE TEXT
+   ⭐ FIVE MINUTE PRACTICE — FIXED
 
    ========================================================= \*/
 
-.soulism-five-minute {
+#soulism-ati-blog .sa-five-minute {
 
-  margin: 65px 0;
+  display: block !important;
 
-  padding: 55px 40px;
+  width: 100% !important;
 
-  border-radius: 18px;
+  margin: 65px 0 !important;
 
-  background: linear-gradient(
+  padding: 55px 40px !important;
+
+  /\* IMPORTANT \*/
+
+  background-color: #3d2b1e !important;
+
+  background-image: linear-gradient(
 
     135deg,
 
-    #3d2c20,
+    #3d2b1e 0%,
 
-    #705136
+    #705137 100%
 
-  );
-
-  color: #ffffff !important;
-
-  box-shadow: 0 18px 45px rgba(60,40,20,.15);
-
-}
-
-.soulism-five-minute h2 {
-
-  margin: 0 0 18px;
+  ) !important;
 
   color: #ffffff !important;
 
-  font-family: Georgia, "Times New Roman", serif;
+  border-radius: 18px !important;
 
-  font-size: 46px;
+  border: none !important;
 
-  line-height: 1.15;
+  text-align: center !important;
+
+  box-shadow:
+
+    0 20px 45px rgba(45,30,20,.18) !important;
 
 }
 
-.soulism-five-minute p {
 
-  max-width: 680px;
+/\* Force every heading inside this section to WHITE \*/
 
-  margin: 0 auto 30px;
+#soulism-ati-blog .sa-five-minute h2,
+
+#soulism-ati-blog .sa-five-minute h3,
+
+#soulism-ati-blog .sa-five-minute strong {
 
   color: #ffffff !important;
 
-  opacity: .95;
-
-  font-size: 17px;
+  background: transparent !important;
 
 }
 
-.soulism-practice-list {
 
-  max-width: 680px;
+/\* Main heading \*/
 
-  margin: 30px auto 0;
+#soulism-ati-blog .sa-five-minute h2 {
+
+  margin: 0 0 20px !important;
+
+  padding: 0 !important;
+
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-size: 46px !important;
+
+  line-height: 1.2 !important;
+
+  font-weight: 500 !important;
 
 }
 
-.soulism-practice-item {
 
-  display: flex;
+/\* Description \*/
 
-  align-items: flex-start;
+#soulism-ati-blog .sa-five-minute > p {
 
-  gap: 15px;
+  max-width: 680px !important;
 
-  padding: 17px 0;
+  margin: 0 auto 32px !important;
 
-  border-bottom: 1px solid rgba(255,255,255,.2);
+  padding: 0 !important;
 
   color: #ffffff !important;
 
-  font-size: 16px;
+  background: transparent !important;
+
+  font-size: 17px !important;
+
+  line-height: 1.8 !important;
 
 }
 
-.soulism-practice-number {
 
-  flex: 0 0 36px;
+/\* List \*/
 
-  width: 36px;
+#soulism-ati-blog .sa-practice-list {
 
-  height: 36px;
+  display: block !important;
 
-  border: 1px solid rgba(255,255,255,.55);
+  width: 100% !important;
 
-  border-radius: 50%;
+  max-width: 680px !important;
 
-  display: flex;
+  margin: 25px auto 0 !important;
 
-  align-items: center;
+  padding: 0 !important;
 
-  justify-content: center;
+}
+
+
+/\* Each row \*/
+
+#soulism-ati-blog .sa-practice-item {
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  width: 100% !important;
+
+  margin: 0 !important;
+
+  padding: 17px 0 !important;
 
   color: #ffffff !important;
 
-  font-weight: 600;
+  background: transparent !important;
+
+  border-bottom: 1px solid rgba(255,255,255,.22) !important;
+
+  text-align: left !important;
+
+  font-size: 16px !important;
+
+  line-height: 1.7 !important;
 
 }
+
+
+/\* Last row \*/
+
+#soulism-ati-blog .sa-practice-item:last-child {
+
+  border-bottom: none !important;
+
+}
+
+
+/\* Number circle \*/
+
+#soulism-ati-blog .sa-number {
+
+  flex: 0 0 38px !important;
+
+  width: 38px !important;
+
+  height: 38px !important;
+
+  margin-right: 15px !important;
+
+  padding: 0 !important;
+
+  display: flex !important;
+
+  align-items: center !important;
+
+  justify-content: center !important;
+
+  color: #ffffff !important;
+
+  background: rgba(255,255,255,.10) !important;
+
+  border: 1px solid rgba(255,255,255,.55) !important;
+
+  border-radius: 50% !important;
+
+  font-weight: 600 !important;
+
+  font-size: 15px !important;
+
+}
+
 
 /\* =========================================================
 
-   FINAL CTA
+   CTA
 
    ========================================================= \*/
 
-.soulism-cta {
+#soulism-ati-blog .sa-cta {
 
-  margin: 70px 0 30px;
+  margin: 70px 0 20px !important;
 
-  padding: 55px 30px;
+  padding: 55px 30px !important;
 
-  background: #e9dfd1;
+  background: #e9dfd0 !important;
 
-  border-radius: 18px;
+  border-radius: 18px !important;
 
-  text-align: center;
-
-}
-
-.soulism-cta h2 {
-
-  margin: 0 0 18px;
-
-  color: var(--brown-dark);
+  text-align: center !important;
 
 }
 
-.soulism-cta p {
+#soulism-ati-blog .sa-cta h2 {
 
-  max-width: 650px;
+  margin: 0 0 18px !important;
 
-  margin: 0 auto 28px;
+  padding: 0 !important;
 
-  color: var(--text);
+  color: #3d2b1e !important;
+
+  font-family: Georgia, "Times New Roman", serif !important;
+
+  font-size: 38px !important;
 
 }
 
-.soulism-button {
+#soulism-ati-blog .sa-cta p {
 
-  display: inline-block;
+  max-width: 650px !important;
 
-  padding: 14px 32px;
+  margin: 0 auto 28px !important;
 
-  border-radius: 30px;
+  padding: 0 !important;
 
-  background: var(--brown);
+  color: #40372f !important;
+
+}
+
+#soulism-ati-blog .sa-button {
+
+  display: inline-block !important;
+
+  margin: 0 !important;
+
+  padding: 14px 32px !important;
 
   color: #ffffff !important;
+
+  background: #6f4b2d !important;
+
+  border-radius: 30px !important;
 
   text-decoration: none !important;
 
-  font-size: 14px;
+  font-size: 14px !important;
 
-  font-weight: 600;
-
-  transition: .3s ease;
+  font-weight: 600 !important;
 
 }
 
-.soulism-button:hover {
-
-  background: var(--brown-dark);
-
-  transform: translateY(-2px);
-
-}
 
 /\* =========================================================
 
-   FOOTER
+   BLOG FOOTER
 
    ========================================================= \*/
 
-.soulism-blog-footer {
+#soulism-ati-blog .sa-footer {
 
-  margin-top: 70px;
+  margin-top: 70px !important;
 
-  padding: 55px 20px;
+  padding: 55px 20px !important;
 
-  background: #29221c;
-
-  text-align: center;
+  background: #29221c !important;
 
   color: #ffffff !important;
 
+  text-align: center !important;
+
 }
 
-.soulism-footer-logo {
+#soulism-ati-blog .sa-footer-logo {
 
-  font-family: Georgia, "Times New Roman", serif;
+  margin: 0 !important;
 
-  font-size: 42px;
-
-  letter-spacing: 4px;
+  padding: 0 !important;
 
   color: #ffffff !important;
 
-}
+  font-family: Georgia, "Times New Roman", serif !important;
 
-.soulism-footer-tagline {
+  font-size: 40px !important;
 
-  margin: 8px 0 22px;
-
-  color: #d0bda5 !important;
-
-  font-size: 12px;
-
-  letter-spacing: 2px;
+  letter-spacing: 4px !important;
 
 }
 
-.soulism-footer-website {
+#soulism-ati-blog .sa-footer-tagline {
+
+  margin: 8px 0 22px !important;
+
+  padding: 0 !important;
+
+  color: #d4bda2 !important;
+
+  font-size: 12px !important;
+
+  letter-spacing: 2px !important;
+
+}
+
+#soulism-ati-blog .sa-footer-website {
 
   color: #e0bd91 !important;
 
   text-decoration: none !important;
 
-  font-size: 15px;
+  font-size: 15px !important;
 
 }
 
-.soulism-footer-copy {
+#soulism-ati-blog .sa-footer-copy {
 
-  margin-top: 25px;
+  margin: 25px 0 0 !important;
 
-  color: #aaa097 !important;
+  padding: 0 !important;
 
-  font-size: 12px;
+  color: #aaa098 !important;
+
+  font-size: 12px !important;
 
 }
+
 
 /\* =========================================================
 
@@ -666,137 +779,156 @@ image: /images/blog/1000838045.png
 
 @media (max-width: 700px) {
 
-  .soulism-hero {
+  #soulism-ati-blog .sa-hero {
 
-    padding: 65px 20px 60px;
-
-  }
-
-  .soulism-hero h1 {
-
-    font-size: 48px;
-
-    letter-spacing: -1px;
+    padding: 60px 20px !important;
 
   }
 
-  .soulism-sanskrit {
+  #soulism-ati-blog .sa-hero h1 {
 
-    font-size: 27px;
-
-  }
-
-  .soulism-hero-subtitle {
-
-    font-size: 16px;
+    font-size: 48px !important;
 
   }
 
-  .soulism-content {
+  #soulism-ati-blog .sa-sanskrit {
 
-    padding: 50px 20px;
-
-  }
-
-  .soulism-intro {
-
-    margin-bottom: 45px;
+    font-size: 27px !important;
 
   }
 
-  .soulism-intro h2 {
+  #soulism-ati-blog .sa-hero-description {
 
-    font-size: 37px;
-
-  }
-
-  .soulism-intro p {
-
-    font-size: 16px;
+    font-size: 16px !important;
 
   }
 
-  .soulism-article h2 {
+  #soulism-ati-blog .sa-content {
 
-    font-size: 33px;
-
-    margin-top: 45px;
+    padding: 50px 20px !important;
 
   }
 
-  .soulism-article p {
+  #soulism-ati-blog .sa-intro h2 {
 
-    font-size: 16px;
-
-    line-height: 1.85;
+    font-size: 37px !important;
 
   }
 
-  .soulism-balance-grid {
+  #soulism-ati-blog .sa-intro p {
 
-    grid-template-columns: 1fr;
-
-  }
-
-  .soulism-quote {
-
-    padding: 30px 17px;
+    font-size: 16px !important;
 
   }
 
-  .soulism-quote-sanskrit {
+  #soulism-ati-blog .sa-article h2 {
 
-    font-size: 25px;
-
-  }
-
-  .soulism-quote-english {
-
-    font-size: 21px;
+    font-size: 33px !important;
 
   }
 
-  .soulism-five-minute {
+  #soulism-ati-blog .sa-article p {
 
-    margin: 50px -2px;
-
-    padding: 38px 22px;
+    font-size: 16px !important;
 
   }
 
-  .soulism-five-minute h2 {
+  #soulism-ati-blog .sa-card-grid {
 
-    font-size: 37px;
-
-  }
-
-  .soulism-five-minute p {
-
-    font-size: 16px;
+    grid-template-columns: 1fr !important;
 
   }
 
-  .soulism-practice-item {
+  #soulism-ati-blog .sa-quote {
 
-    font-size: 15px;
-
-  }
-
-  .soulism-highlight p {
-
-    font-size: 25px;
+    padding: 30px 17px !important;
 
   }
 
-  .soulism-cta {
+  #soulism-ati-blog .sa-quote-sanskrit {
 
-    padding: 42px 22px;
+    font-size: 25px !important;
 
   }
 
-  .soulism-footer-logo {
+  #soulism-ati-blog .sa-quote-english {
 
-    font-size: 35px;
+    font-size: 21px !important;
+
+  }
+
+
+  /\* MOBILE FIVE-MINUTE FIX \*/
+
+  #soulism-ati-blog .sa-five-minute {
+
+    margin: 50px 0 !important;
+
+    padding: 40px 22px !important;
+
+    background-color: #3d2b1e !important;
+
+    background-image: linear-gradient(
+
+      135deg,
+
+      #3d2b1e,
+
+      #705137
+
+    ) !important;
+
+    color: #ffffff !important;
+
+  }
+
+  #soulism-ati-blog .sa-five-minute h2 {
+
+    color: #ffffff !important;
+
+    font-size: 37px !important;
+
+    line-height: 1.2 !important;
+
+  }
+
+  #soulism-ati-blog .sa-five-minute > p {
+
+    color: #ffffff !important;
+
+    font-size: 16px !important;
+
+  }
+
+  #soulism-ati-blog .sa-practice-item {
+
+    color: #ffffff !important;
+
+    font-size: 15px !important;
+
+  }
+
+  #soulism-ati-blog .sa-number {
+
+    color: #ffffff !important;
+
+  }
+
+  #soulism-ati-blog .sa-highlight p {
+
+    font-size: 25px !important;
+
+  }
+
+  #soulism-ati-blog .sa-cta {
+
+    padding: 42px 22px !important;
+
+  }
+
+  #soulism-ati-blog .sa-footer-logo {
+
+    font-size: 35px !important;
 
   }
 
@@ -804,21 +936,22 @@ image: /images/blog/1000838045.png
 
 </style>
 
-<div class="soulism-blog">
+
+<div id="soulism-ati-blog">
 
   <!-- HERO -->
 
-  <section class="soulism-hero">
+  <section class="sa-hero">
 
-    <div class="soulism-hero-inner">
+    <div class="sa-hero-inner">
 
-      <div class="soulism-eyebrow">
+      <div class="sa-eyebrow">
 
         SOULISM • MINDFUL LIVING
 
       </div>
 
-      <div class="soulism-sanskrit">
+      <div class="sa-sanskrit">
 
         अति सर्वत्र वर्जयेत्।
 
@@ -832,9 +965,9 @@ image: /images/blog/1000838045.png
 
       </h1>
 
-      <div class="soulism-hero-line"></div>
+      <div class="sa-line"></div>
 
-      <p class="soulism-hero-subtitle">
+      <p class="sa-hero-description">
 
         A timeless principle for living with awareness,
 
@@ -846,11 +979,12 @@ image: /images/blog/1000838045.png
 
   </section>
 
+
   <!-- CONTENT -->
 
-  <main class="soulism-content">
+  <main class="sa-content">
 
-    <div class="soulism-intro">
+    <div class="sa-intro">
 
       <h2>
 
@@ -868,7 +1002,8 @@ image: /images/blog/1000838045.png
 
     </div>
 
-    <article class="soulism-article">
+
+    <article class="sa-article">
 
       <p>
 
@@ -900,21 +1035,23 @@ image: /images/blog/1000838045.png
 
       </p>
 
-      <div class="soulism-quote">
 
-        <div class="soulism-quote-sanskrit">
+      <div class="sa-quote">
+
+        <div class="sa-quote-sanskrit">
 
           अति सर्वत्र वर्जयेत्।
 
         </div>
 
-        <div class="soulism-quote-english">
+        <div class="sa-quote-english">
 
           “Avoid Excess in Everything.”
 
         </div>
 
       </div>
+
 
       <h2>
 
@@ -930,9 +1067,10 @@ image: /images/blog/1000838045.png
 
       </p>
 
-      <div class="soulism-balance-grid">
 
-        <div class="soulism-card">
+      <div class="sa-card-grid">
+
+        <div class="sa-card">
 
           <strong>Money</strong>
 
@@ -946,7 +1084,7 @@ image: /images/blog/1000838045.png
 
         </div>
 
-        <div class="soulism-card">
+        <div class="sa-card">
 
           <strong>Food</strong>
 
@@ -958,7 +1096,7 @@ image: /images/blog/1000838045.png
 
         </div>
 
-        <div class="soulism-card">
+        <div class="sa-card">
 
           <strong>Work</strong>
 
@@ -970,7 +1108,7 @@ image: /images/blog/1000838045.png
 
         </div>
 
-        <div class="soulism-card">
+        <div class="sa-card">
 
           <strong>Technology</strong>
 
@@ -985,6 +1123,7 @@ image: /images/blog/1000838045.png
         </div>
 
       </div>
+
 
       <h2>
 
@@ -1020,7 +1159,8 @@ image: /images/blog/1000838045.png
 
       </p>
 
-      <div class="soulism-highlight">
+
+      <div class="sa-highlight">
 
         <p>
 
@@ -1031,6 +1171,7 @@ image: /images/blog/1000838045.png
         </p>
 
       </div>
+
 
       <h2>
 
@@ -1068,9 +1209,14 @@ image: /images/blog/1000838045.png
 
       </p>
 
-      <!-- FIVE MINUTE PRACTICE -->
 
-      <section class="soulism-five-minute">
+      <!-- =================================================
+
+           FIVE MINUTE PRACTICE
+
+           ================================================= -->
+
+      <section class="sa-five-minute">
 
         <h2>
 
@@ -1086,27 +1232,27 @@ image: /images/blog/1000838045.png
 
         </p>
 
-        <div class="soulism-practice-list">
+        <div class="sa-practice-list">
 
-          <div class="soulism-practice-item">
+          <div class="sa-practice-item">
 
-            <span class="soulism-practice-number">1</span>
+            <span class="sa-number">1</span>
 
             <span>Put your phone aside.</span>
 
           </div>
 
-          <div class="soulism-practice-item">
+          <div class="sa-practice-item">
 
-            <span class="soulism-practice-number">2</span>
+            <span class="sa-number">2</span>
 
             <span>Sit comfortably and breathe slowly.</span>
 
           </div>
 
-          <div class="soulism-practice-item">
+          <div class="sa-practice-item">
 
-            <span class="soulism-practice-number">3</span>
+            <span class="sa-number">3</span>
 
             <span>
 
@@ -1116,9 +1262,9 @@ image: /images/blog/1000838045.png
 
           </div>
 
-          <div class="soulism-practice-item">
+          <div class="sa-practice-item">
 
-            <span class="soulism-practice-number">4</span>
+            <span class="sa-number">4</span>
 
             <span>
 
@@ -1128,9 +1274,9 @@ image: /images/blog/1000838045.png
 
           </div>
 
-          <div class="soulism-practice-item">
+          <div class="sa-practice-item">
 
-            <span class="soulism-practice-number">5</span>
+            <span class="sa-number">5</span>
 
             <span>
 
@@ -1143,6 +1289,7 @@ image: /images/blog/1000838045.png
         </div>
 
       </section>
+
 
       <h2>
 
@@ -1186,7 +1333,8 @@ image: /images/blog/1000838045.png
 
       </p>
 
-      <div class="soulism-highlight">
+
+      <div class="sa-highlight">
 
         <p>
 
@@ -1197,6 +1345,7 @@ image: /images/blog/1000838045.png
         </p>
 
       </div>
+
 
       <h2>
 
@@ -1227,6 +1376,7 @@ image: /images/blog/1000838045.png
         The wisdom lies in finding the middle path.
 
       </p>
+
 
       <h2>
 
@@ -1272,6 +1422,7 @@ image: /images/blog/1000838045.png
 
       </p>
 
+
       <h2>
 
         Choose Awareness. Choose Balance. Choose Soulism.
@@ -1294,7 +1445,8 @@ image: /images/blog/1000838045.png
 
       </p>
 
-      <div class="soulism-highlight">
+
+      <div class="sa-highlight">
 
         <p>
 
@@ -1303,6 +1455,7 @@ image: /images/blog/1000838045.png
         </p>
 
       </div>
+
 
       <p>
 
@@ -1356,15 +1509,16 @@ image: /images/blog/1000838045.png
 
       </p>
 
-      <div class="soulism-quote">
 
-        <div class="soulism-quote-sanskrit">
+      <div class="sa-quote">
+
+        <div class="sa-quote-sanskrit">
 
           अति सर्वत्र वर्जयेत्।
 
         </div>
 
-        <div class="soulism-quote-english">
+        <div class="sa-quote-english">
 
           Ati Sarvatra Varjayet.<br>
 
@@ -1374,9 +1528,10 @@ image: /images/blog/1000838045.png
 
       </div>
 
+
       <!-- CTA -->
 
-      <section class="soulism-cta">
+      <section class="sa-cta">
 
         <h2>
 
@@ -1396,7 +1551,7 @@ image: /images/blog/1000838045.png
 
           href="https://www.thesoulism.com"
 
-          class="soulism-button">
+          class="sa-button">
 
           Explore Soulism
 
@@ -1408,17 +1563,18 @@ image: /images/blog/1000838045.png
 
   </main>
 
-  <!-- FOOTER -->
 
-  <footer class="soulism-blog-footer">
+  <!-- BLOG FOOTER -->
 
-    <div class="soulism-footer-logo">
+  <footer class="sa-footer">
+
+    <div class="sa-footer-logo">
 
       SOULISM
 
     </div>
 
-    <div class="soulism-footer-tagline">
+    <div class="sa-footer-tagline">
 
       AWAKEN · ALIGN · INTEGRATE
 
@@ -1428,13 +1584,13 @@ image: /images/blog/1000838045.png
 
       href="https://www.thesoulism.com"
 
-      class="soulism-footer-website">
+      class="sa-footer-website">
 
       www.TheSoulism.com
 
     </a>
 
-    <div class="soulism-footer-copy">
+    <div class="sa-footer-copy">
 
       © 2026 TheSoulism.com · All Rights Reserved
 
