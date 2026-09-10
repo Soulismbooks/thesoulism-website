@@ -804,7 +804,6 @@ image: /images/blog/1000838045.png
 
 </style>
 
-
 <div class="soulism-blog">
 
   <!-- HERO -->
@@ -847,7 +846,6 @@ image: /images/blog/1000838045.png
 
   </section>
 
-
   <!-- CONTENT -->
 
   <main class="soulism-content">
@@ -869,7 +867,6 @@ image: /images/blog/1000838045.png
       </p>
 
     </div>
-
 
     <article class="soulism-article">
 
@@ -903,7 +900,6 @@ image: /images/blog/1000838045.png
 
       </p>
 
-
       <div class="soulism-quote">
 
         <div class="soulism-quote-sanskrit">
@@ -920,7 +916,6 @@ image: /images/blog/1000838045.png
 
       </div>
 
-
       <h2>
 
         The Problem Is Not the Thing—It Is the Excess
@@ -934,7 +929,6 @@ image: /images/blog/1000838045.png
         But life is rarely that simple.
 
       </p>
-
 
       <div class="soulism-balance-grid">
 
@@ -992,7 +986,6 @@ image: /images/blog/1000838045.png
 
       </div>
 
-
       <h2>
 
         Can Even Worship Become Excessive?
@@ -1027,7 +1020,6 @@ image: /images/blog/1000838045.png
 
       </p>
 
-
       <div class="soulism-highlight">
 
         <p>
@@ -1039,7 +1031,6 @@ image: /images/blog/1000838045.png
         </p>
 
       </div>
-
 
       <h2>
 
@@ -1076,7 +1067,6 @@ image: /images/blog/1000838045.png
         meaningful part of your day.
 
       </p>
-
 
       <!-- FIVE MINUTE PRACTICE -->
 
@@ -1154,7 +1144,6 @@ image: /images/blog/1000838045.png
 
       </section>
 
-
       <h2>
 
         Balance Is Not the Same as Giving Up
@@ -1197,7 +1186,6 @@ image: /images/blog/1000838045.png
 
       </p>
 
-
       <div class="soulism-highlight">
 
         <p>
@@ -1209,7 +1197,6 @@ image: /images/blog/1000838045.png
         </p>
 
       </div>
-
 
       <h2>
 
@@ -1240,7 +1227,6 @@ image: /images/blog/1000838045.png
         The wisdom lies in finding the middle path.
 
       </p>
-
 
       <h2>
 
@@ -1286,7 +1272,6 @@ image: /images/blog/1000838045.png
 
       </p>
 
-
       <h2>
 
         Choose Awareness. Choose Balance. Choose Soulism.
@@ -1309,7 +1294,6 @@ image: /images/blog/1000838045.png
 
       </p>
 
-
       <div class="soulism-highlight">
 
         <p>
@@ -1319,7 +1303,6 @@ image: /images/blog/1000838045.png
         </p>
 
       </div>
-
 
       <p>
 
@@ -1373,7 +1356,6 @@ image: /images/blog/1000838045.png
 
       </p>
 
-
       <div class="soulism-quote">
 
         <div class="soulism-quote-sanskrit">
@@ -1391,7 +1373,6 @@ image: /images/blog/1000838045.png
         </div>
 
       </div>
-
 
       <!-- CTA -->
 
@@ -1426,7 +1407,6 @@ image: /images/blog/1000838045.png
     </article>
 
   </main>
-
 
   <!-- FOOTER -->
 
