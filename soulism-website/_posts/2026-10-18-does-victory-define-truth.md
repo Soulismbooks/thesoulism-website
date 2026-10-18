@@ -3,7 +3,7 @@ title: "Does Victory Define Truth? How Power Shapes the Stories We Believe"
 date: 2026-10-18T14:00:00
 tag: Belief
 excerpt: "Does winning make someone right? Explore how power shapes historical narratives, why victory is not proof of truth, and how Soulism encourages independent thinking."
-image: /images/blog/does-victory-define-truth.jpg
+image: /images/blog/does-victory-define-truth.svg
 ---
 
 # Does Victory Define Truth? How Power Shapes the Stories We Believe
