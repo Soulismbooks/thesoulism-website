@@ -1,0 +1,2 @@
+# Add route-preserving redirects after Blogger URL inventory is generated.
+# Do not add speculative redirects. Existing posts/pages must be mapped first.
