@@ -1,1 +1,0 @@
-Temporary permission test file. This file is intentionally outside the Jekyll content folders and is not referenced by the website, so it should not affect the published site.
