@@ -117,6 +117,21 @@
     <img src="{{ page.image }}" alt="{{ page.title }}" style="width:100%; border-radius:12px; margin:20px 0 35px 0; box-shadow:0 4px 10px rgba(0,0,0,0.1);">
     {% endif %}
 
+    <!-- Automatic editorial graphic for money-related Soulism articles -->
+    {% if page.title contains "Money Is Neither Good Nor Evil" %}
+    <aside class="post-graphic" aria-label="The Soulism perspective on money">
+      <p class="graphic-kicker">The Soulism Perspective</p>
+      <h3>Money is a resource. Awareness gives it direction.</h3>
+      <p>Wealth becomes more meaningful when financial choices support a life built on responsibility, freedom, and inner prosperity.</p>
+      <div class="post-graphic-grid">
+        <div class="post-graphic-item"><b>Earn with integrity</b><span>Choose honest methods and consider the effects on other people.</span></div>
+        <div class="post-graphic-item"><b>Spend with purpose</b><span>Let priorities guide decisions—not pressure or comparison.</span></div>
+        <div class="post-graphic-item"><b>Plan for freedom</b><span>Save thoughtfully and understand risk before investing.</span></div>
+        <div class="post-graphic-item"><b>Value inner wealth</b><span>Protect time, relationships, awareness, and peace of mind.</span></div>
+      </div>
+    </aside>
+    {% endif %}
+
     <!-- 🟢 मशीन आपका पूरा आर्टिकल (Markdown) इस जगह पर डाल देगी -->
     {{ content }}
     
