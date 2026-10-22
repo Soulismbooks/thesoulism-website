@@ -40,6 +40,40 @@
   .btn-fb { background: #1877F2; }
   .btn-tw { background: #1DA1F2; }
   .btn-copy { background: #64748b; }
+
+  /* Soulism editorial graphics: responsive, lightweight decorative accents */
+  .post-body { max-width:760px; font-size:1.12rem; line-height:1.9; color:#292a2d; }
+  .post-body h1#post-title { font-size:clamp(2.15rem, 6vw, 3.4rem) !important; line-height:1.12 !important; letter-spacing:-.035em; color:#173d2f; }
+  .post-body h2 { margin:2.2em 0 .65em; color:#185b43; font-size:clamp(1.45rem, 4vw, 2rem); line-height:1.25; letter-spacing:-.02em; }
+  .post-body h2::before { content:""; display:inline-block; vertical-align:middle; width:5px; height:1.1em; margin-right:.55em; background:linear-gradient(180deg,#d4ad50,#24845d); border-radius:10px; }
+  .post-body p { margin:0 0 1.2em; }
+  .post-body strong { color:#174d39; }
+  .post-body ul, .post-body ol { padding:1.15em 1.3em 1.15em 2.8em; margin:1.4em 0 1.8em; border:1px solid #e4e8de; border-radius:18px; background:linear-gradient(135deg,#fbfaf5,#f0f5eb); }
+  .post-body li { padding:.28em 0 .28em .25em; }
+  .post-body blockquote { border:0; border-left:5px solid #c79d42; border-radius:0 18px 18px 0; margin:2em 0; padding:1.1em 1.35em; font-family:Georgia,serif; font-size:1.35rem; color:#254f3b; background:linear-gradient(110deg,#f6f0dd,#f6f8f1); box-shadow:0 8px 24px rgba(26,48,32,.06); }
+  .post-ornament { display:flex; align-items:center; gap:12px; margin:20px 0 28px; color:#9d7b36; font-size:.78rem; letter-spacing:.2em; text-transform:uppercase; }
+  .post-ornament::before, .post-ornament::after { content:""; height:1px; flex:1; background:linear-gradient(90deg,transparent,#d3bd84); }
+  .post-ornament::after { background:linear-gradient(90deg,#d3bd84,transparent); }
+  .post-body > img:first-of-type { max-height:460px; object-fit:cover; border-radius:22px !important; box-shadow:0 16px 36px rgba(21,45,33,.15) !important; }
+  .post-graphic { margin:2.2rem 0; padding:1.5rem; border:1px solid #e2e8d9; border-radius:24px; color:#f9f5e7; background:radial-gradient(circle at 88% 10%,rgba(210,169,77,.25),transparent 28%),linear-gradient(135deg,#11201c,#214b37); box-shadow:0 15px 35px rgba(20,45,31,.12); overflow:hidden; }
+  .post-graphic .graphic-kicker { margin:0 0 .65rem; color:#e2c579; font-size:.78rem; font-weight:700; letter-spacing:.16em; text-transform:uppercase; }
+  .post-graphic h3 { margin:0 0 .65rem; max-width:560px; font:700 clamp(1.65rem,4.6vw,2.35rem)/1.12 Georgia,serif; color:#fff7df; }
+  .post-graphic p { margin:0; color:#e0e9df; font-size:1rem; }
+  .post-graphic-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px; margin-top:1.2rem; }
+  .post-graphic-item { padding:1rem; border:1px solid rgba(244,224,170,.25); background:rgba(255,255,255,.045); border-radius:16px; }
+  .post-graphic-item b { display:block; margin-bottom:.35rem; color:#f1d58c; font-size:1rem; }
+  .post-graphic-item span { color:#e3e9e0; font-size:.88rem; line-height:1.5; }
+  .post-book-note { margin:2rem 0; padding:1.2rem 1.35rem; border-left:4px solid #cba34c; border-radius:0 16px 16px 0; background:#f7f2e5; color:#253c2f; }
+  .post-book-note a { color:#176441; font-weight:700; text-underline-offset:3px; }
+  .share-section { margin-top:3.5rem; padding-top:1.6rem; border-top:1px solid #e2dfd4; }
+  .share-btn { border-radius:999px; padding:11px 19px; box-shadow:0 4px 12px rgba(0,0,0,.08); }
+  @media(max-width:600px) {
+    .post-body { font-size:1.05rem; line-height:1.82; }
+    .post-graphic { padding:1.15rem; border-radius:20px; }
+    .post-graphic-grid { gap:8px; }
+    .post-graphic-item { padding:.8rem; }
+  }
+
 </style>
 </head>
 <body>
@@ -68,6 +102,8 @@
         {{ page.date | date: "%B %d, %Y" }} {% if page.tag %} · {{ page.tag }} {% endif %}
       </span>
     </div>
+    <!-- Editorial accent for Soulism article pages -->
+    <div class="post-ornament" aria-hidden="true">Awareness · Meaning · Prosperity</div>
     <!-- 🟢 मशीन ब्लॉग का टाइटल यहाँ खुद भरेगी -->
     <h1 id="post-title" style="max-width:700px; margin-top:10px; font-size: 2.8rem; line-height: 1.2;">{{ page.title }}</h1>
   </div>
