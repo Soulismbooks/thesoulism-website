@@ -3,7 +3,7 @@ title: "All Souls Are Equal: The Soulism Principle of Equality, Dignity, and Com
 date: 2026-10-28T09:00:00
 tag: Soulism Principles
 excerpt: "Explore the Soulism principle All Souls Are Equal: why every person deserves fundamental dignity, how equality differs from sameness, and how compassion and fairness can guide everyday life."
-image: /images/blog/all-souls-are-equal-soulism-featured.svg
+image: /images/blog/all-souls-are-equal-soulism-featured.svg?v=20261028-2
 ---
 
 # All Souls Are Equal: The Soulism Principle of Equality, Dignity, and Compassion
