@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+<title id="title">All Souls Are Equal — Soulism Principle</title>
+<desc id="desc">A deep green and gold feature graphic with the Soulism logo, celebrating equality, dignity and compassion.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1915"/><stop offset=".55" stop-color="#173c2c"/><stop offset="1" stop-color="#2e6548"/></linearGradient>
+  <radialGradient id="glow"><stop stop-color="#d6b35f" stop-opacity=".32"/><stop offset="1" stop-color="#d6b35f" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ead9a0"/><stop offset="1" stop-color="#cba34e"/></linearGradient>
+  <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000" flood-opacity=".22"/></filter>
+  <clipPath id="panel"><rect x="755" y="125" width="365" height="390" rx="28"/></clipPath>
+</defs>
+<rect width="1200" height="630" fill="url(#bg)"/>
+<circle cx="1000" cy="110" r="340" fill="url(#glow)"/>
+<g fill="none" stroke="#d5b55d" stroke-opacity=".16">
+  <circle cx="1000" cy="110" r="220"/><circle cx="1000" cy="110" r="275"/><circle cx="1000" cy="110" r="330"/>
+</g>
+<rect x="65" y="65" width="205" height="40" rx="20" fill="url(#gold)"/>
+<text x="167" y="91" font-family="Arial,sans-serif" font-size="15" font-weight="700" letter-spacing="2" fill="#142a20" text-anchor="middle">SOULISM PRINCIPLE</text>
+<text x="65" y="207" font-family="Georgia,'Times New Roman',serif" font-size="68" font-weight="700" fill="#fff9e9">ALL SOULS</text>
+<text x="65" y="288" font-family="Georgia,'Times New Roman',serif" font-size="68" font-weight="700" fill="#e5c778">ARE EQUAL</text>
+<rect x="68" y="326" width="360" height="5" rx="2.5" fill="url(#gold)"/>
+<text x="68" y="376" font-family="Arial,sans-serif" font-size="23" fill="#f2f1e6">Equality · Dignity · Compassion</text>
+<text x="68" y="430" font-family="Arial,sans-serif" font-size="20" fill="#c1d4c8">Different lives. Different paths.</text>
+<text x="68" y="461" font-family="Arial,sans-serif" font-size="20" fill="#c1d4c8">Equal fundamental worth.</text>
+<text x="68" y="566" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="2.5" fill="#e5ce90">THESOULISM.COM</text>
+<g filter="url(#shadow)">
+  <rect x="755" y="125" width="365" height="390" rx="28" fill="#fbfaf6"/>
+  <image href="https://thesoulism.com/images/soulism-logo.png" x="773" y="160" width="329" height="320" preserveAspectRatio="xMidYMid meet" clip-path="url(#panel)"/>
+</g>
+<path d="M65 595 H1135" stroke="#e4c775" stroke-opacity=".24"/>
+</svg>
