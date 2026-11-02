@@ -3,6 +3,7 @@ title: "Are You Living Your Own Life, or Someone Else’s Expectations?"
 date: 2026-11-02T09:00:00
 tag: Purpose
 excerpt: "Are your choices guided by your own values or by the need to meet other people’s expectations? Explore how approval, inherited beliefs, and social pressure shape identity—and how Soulism encourages conscious, responsible freedom."
+image: /images/blog/are-you-living-your-own-life-feature.svg?v=20261102-1
 ---
 
 <div class="post-ornament">A Soulism Reflection</div>
