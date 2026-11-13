@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#18294b"/><stop offset=".48" stop-color="#d68c79"/><stop offset="1" stop-color="#f8d8a0"/></linearGradient>
+ <linearGradient id="sun" x2="0" y2="1"><stop stop-color="#fff4c8"/><stop offset="1" stop-color="#f6a65c"/></linearGradient>
+ <linearGradient id="lake" x2="0" y2="1"><stop stop-color="#6d8190"/><stop offset="1" stop-color="#263d52"/></linearGradient>
+ <linearGradient id="cup" x2="0" y2="1"><stop stop-color="#fffdf7"/><stop offset="1" stop-color="#d8d5df"/></linearGradient>
+</defs>
+<rect width="1200" height="630" fill="url(#sky)"/>
+<circle cx="900" cy="205" r="78" fill="url(#sun)" opacity=".96"/>
+<path d="M0 340 Q140 230 280 315 T560 300 T850 310 T1200 260 V630 H0Z" fill="#596879" opacity=".8"/>
+<path d="M0 390 Q170 280 350 370 T700 350 T1000 345 T1200 330 V630 H0Z" fill="#344b5e"/>
+<path d="M0 430 Q200 360 420 415 T820 405 T1200 385 V630 H0Z" fill="url(#lake)"/>
+<path d="M750 410 Q900 395 1040 420 T1200 410" stroke="#f6d6a0" stroke-width="4" opacity=".55" fill="none"/>
+<path d="M0 485 Q180 455 360 485 T700 475" stroke="#f6d6a0" stroke-width="3" opacity=".35" fill="none"/>
+<path d="M0 0 H165 Q125 90 155 160 Q75 120 0 185Z" fill="#182b28"/>
+<path d="M0 0 Q100 70 110 190 M45 0 Q140 60 185 150 M0 70 Q70 95 120 130" stroke="#314b38" stroke-width="18" fill="none"/>
+<path d="M0 530 Q190 490 390 540 T760 530 T1200 510 V630 H0Z" fill="#1d2c2d"/>
+<g transform="translate(170 380)">
+ <rect x="0" y="0" width="180" height="16" rx="5" fill="#6e4b39"/>
+ <rect x="12" y="16" width="156" height="12" rx="4" fill="#9a6b4c"/>
+ <path d="M42 -20 Q28 -70 62 -92 M82 -22 Q70 -65 103 -86" stroke="#fff2df" stroke-width="5" fill="none" opacity=".65"/>
+ <rect x="42" y="-12" width="75" height="78" rx="13" fill="url(#cup)"/>
+ <path d="M117 5 Q155 -2 147 35 Q140 54 117 48" stroke="#eee9df" stroke-width="12" fill="none"/>
+ <path d="M65 15 Q80 0 95 15 Q80 30 65 15Z" fill="#8d61bc"/>
+ <path d="M80 2 V29" stroke="#8d61bc" stroke-width="3"/>
+</g>
+<rect x="410" y="90" width="700" height="340" rx="28" fill="#101a2b" opacity=".26"/>
+<text x="470" y="190" font-family="Georgia,serif" font-size="27" letter-spacing="6" fill="#f8dfbd">THE SOULISM</text>
+<text x="465" y="275" font-family="Georgia,serif" font-size="67" font-weight="bold" fill="#fffaf2">Find Your Peace</text>
+<text x="465" y="350" font-family="Georgia,serif" font-size="67" font-weight="bold" fill="#fffaf2">in Little Moments</text>
+<path d="M468 376 Q730 395 1030 375" stroke="#e9bbd7" stroke-width="7" stroke-linecap="round" fill="none"/>
+<text x="470" y="425" font-family="Arial,sans-serif" font-size="24" fill="#fff7ec">The quiet art of noticing life's everyday beauty</text>
+<text x="470" y="472" font-family="Arial,sans-serif" font-size="18" letter-spacing="3" fill="#f6dfca">A SOULISM REFLECTION</text>
+</svg>
