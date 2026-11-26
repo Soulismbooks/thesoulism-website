@@ -33,12 +33,12 @@
  <path d="M-19 218 L-30 253 L-23 258 L-6 258 L0 224 M5 223 L13 258 L31 258 L37 251 L16 216" fill="#0b1717"/>
  <path d="M-23 253 H-2 M13 253 H36" stroke="#0b1717" stroke-width="10" stroke-linecap="round"/>
 </g>
-<g transform="translate(74 76)">
+<g transform="translate(220 76)">
  <text x="0" y="0" fill="#e8cc8b" font-family="Arial,sans-serif" font-size="17" letter-spacing="5">SOULISM  /  CONSCIOUS LIVING</text>
  <path d="M0 20 H92" stroke="#d5b66e" stroke-width="2"/>
- <text x="0" y="82" fill="#fff8e7" font-family="Georgia,serif" font-weight="bold" font-size="48">You Are the Authority</text>
- <text x="0" y="137" fill="#fff8e7" font-family="Georgia,serif" font-weight="bold" font-size="48">of Your Own Life</text>
- <text x="2" y="178" fill="#f4d69b" font-family="Arial,sans-serif" font-size="20" letter-spacing="1.2">THE POWER OF CONSCIOUS AWARENESS</text>
+ <text x="0" y="82" fill="#fff8e7" font-family="Georgia,serif" font-weight="bold" font-size="43">You Are the Authority</text>
+ <text x="0" y="137" fill="#fff8e7" font-family="Georgia,serif" font-weight="bold" font-size="43">of Your Own Life</text>
+ <text x="2" y="178" fill="#f4d69b" font-family="Arial,sans-serif" font-size="16" letter-spacing="1.0">THE POWER OF CONSCIOUS AWARENESS</text>
 </g>
 <rect x="1" y="1" width="1198" height="673" rx="2" fill="none" stroke="#e9ca83" stroke-opacity=".35" stroke-width="2"/>
 </svg>
