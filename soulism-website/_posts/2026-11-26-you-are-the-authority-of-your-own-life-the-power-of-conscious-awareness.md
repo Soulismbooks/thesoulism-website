@@ -43,8 +43,12 @@ This is the power of conscious awareness.
 .post-body .reflection-box button{display:inline-flex;align-items:center;justify-content:center;margin-top:.4rem;padding:11px 18px;border:0;border-radius:999px;background:#e5c477;color:#183528;font-weight:750;cursor:pointer;transition:transform .2s,filter .2s}
 .post-body .reflection-box button:hover{transform:translateY(-2px);filter:brightness(1.05)}
 .post-body .reflection-box button:focus-visible{outline:3px solid #fff;outline-offset:3px}
-.post-body .reflection-box #reflection-panel{margin-top:1rem;padding:1rem 1.15rem;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(255,255,255,.07)}
-.post-body .reflection-box #reflection-panel li{padding:.25rem 0;color:#f4f1e5}
+.post-body .reflection-box #reflection-panel{margin-top:1rem;padding:1rem 1.15rem;border:1px solid rgba(255,255,255,.2);border-radius:15px;background:rgba(4,24,17,.32)!important;color:#f7f4e9!important}
+.post-body .reflection-box #reflection-panel ol{display:block!important;margin:.25rem 0 1rem!important;padding:.25rem 0 .25rem 1.5rem!important;border:0!important;border-radius:0!important;background:transparent!important;background-color:transparent!important;box-shadow:none!important;color:#f7f4e9!important;list-style:decimal!important}
+.post-body .reflection-box #reflection-panel li{display:list-item!important;margin:.35rem 0!important;padding:.3rem 0!important;border:0!important;background:transparent!important;background-color:transparent!important;box-shadow:none!important;color:#f7f4e9!important;line-height:1.65!important}
+.post-body .reflection-box #reflection-panel p{margin:.75rem 0 0!important;padding:0!important;background:transparent!important;color:#e5eee5!important}
+.post-body .reflection-box #reflection-panel *{text-shadow:none!important}
+.post-body .reflection-box #reflection-panel[hidden]{display:none!important}
 .post-body .article-faq{margin-top:2.4rem;padding-top:1.4rem;border-top:1px solid #e1e7de}
 .post-body .article-faq h3{margin:1.2rem 0 .4rem;color:#185b43;font-size:1.12rem}
 @media(max-width:640px){.post-body .awareness-grid{grid-template-columns:1fr}.post-body .authority-panel{padding:1.15rem;border-radius:18px}.post-body .reflection-box{padding:1.15rem;border-radius:18px}}
