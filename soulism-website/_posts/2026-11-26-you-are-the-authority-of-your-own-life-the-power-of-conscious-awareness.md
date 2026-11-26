@@ -1,6 +1,6 @@
 ---
 title: "You Are the Authority of Your Own Life: The Power of Conscious Awareness"
-date: 2026-11-26T09:00:00+05:30
+date: 2026-11-26T15:00:00+05:30
 tag: Conscious Awareness
 excerpt: "Discover how conscious awareness, reason, lived experience, and personal responsibility can help you make thoughtful decisions and live a life that is truly your own."
 image: /images/blog/you-are-the-authority-of-your-own-life-featured.svg
@@ -275,8 +275,8 @@ Your life is yours to experience. Make it yours to understand.
   "headline": "You Are the Authority of Your Own Life: The Power of Conscious Awareness",
   "description": "Discover how conscious awareness, reason, lived experience, and personal responsibility can help you make thoughtful decisions and live a life that is truly your own.",
   "image": "https://thesoulism.com/images/blog/you-are-the-authority-of-your-own-life-featured.svg",
-  "datePublished": "2026-11-26T09:00:00+05:30",
-  "dateModified": "2026-11-26T09:00:00+05:30",
+  "datePublished": "2026-11-26T15:00:00+05:30",
+  "dateModified": "2026-11-26T15:00:00+05:30",
   "author": {
     "@type": "Person",
     "name": "Shashank Agnihotri"
